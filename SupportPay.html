@@ -83,22 +83,36 @@
         </div>
         <div class="Content-question mt-5">
             <form action="" method="get">
-                <select name="" class="form-select" id="">
+                <select name="" class="form-select" id="select_question">
                     <option value="">Chọn vấn đề của bạn</option>
-                    <option value="">Không thể thanh toán sản phẩm?</option>
-                    <option value="">Không thể liên kết ngân hàng?</option>
-                    <option value="">Thanh toán gặp trục trặc?</option>
-                    <option value="">Không thể mở trang thanh toán?</option>
+                    <option value="cantPay">Không thể thanh toán sản phẩm?</option>
+                    <option value="cantLinkToBank">Không thể liên kết ngân hàng?</option>
+                    <option value="haveTrouble">Thanh toán gặp trục trặc?</option>
+                    <option value="cantOpenPayPage">Không thể mở trang thanh toán?</option>
                 </select>
                 <div class="mb-3">
                     <label for="" class="form-label"></label>
                     <textarea class="form-control" id="" rows="3" aria-label=""
                         placeholder="miêu tả vấn đề của bạn"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary p-2" style="width: 60px;"
+                <button type="submit" id="btn" class="btn btn-primary p-2" style="width: 60px;" disabled
                     onclick="alert('gửi thành công')">Gửi</button>
             </form>
         </div>
+        <script>
+            function validateSelect() {
+                const select = document.getElementById("select_question");
+                const btn = document.getElementById("btn");
+                if (select.value !== "") {
+                    btn.disabled = false;
+                } else {
+                    btn.disabled = true;
+                }
+            }
+            document.getElementById('select_question').addEventListener("change", validateSelect);
+
+        </script>
+
     </div>
     <!-- footer -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
