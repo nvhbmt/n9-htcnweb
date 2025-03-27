@@ -17,34 +17,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="js/product.js"></script>
 </head>
 
 <body>
     <!-- header -->
     <!-- content -->
-    <div class="container px-0">
+    <div class="container px-0 position-relative">
+        <div class="search">
+            <button class="btnSearch btnIcon"  onclick="searchProduct()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" id="searchInput" class="txtSearch" placeholder="Search Here...">
+        </div>
             <!-- row 1 -->
-            <div class="row g-2">
+            <div class="products-container row g-2">
                 <!-- card 1 -->
                 <div class="col-md-3 mb-4 ">      
                     <div class="card rounded-4" style="width:18rem;">
-                        <img src="img/women/tank_top/black.jpg" class="card-img-top" alt="">
+                        <div class="products-img"><a href="product_details.html" target="_blank" rel="noopener noreferrer"><img src="img/women/aothun_black.jpg" class="card-img-top" alt=""></a></div> <!--gắn thẻ a-->
                         <div class="card-body">
-                            <h5 class="card-title">Ribbed Tank Top</h5>
-                            <p class="card-text">$16.65</p>
+                            <a href="product_details.html" class="product-name"><h5 class="card-title">Áo Thun Nữ</h5></a> <!--gắn thẻ a-->
+                            <p class="card-text">150.000 VND</p>
+                            <div class="size-selector"> S M L </div>
                             <div class="color-option">
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="black" checked>
+                                    <button class="btnCart btnIcon" title="Add to Cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                <label class="color-radio" title="Black">
+                                    <input type="radio" name="color" value="black" data-image="img/women/aothun_black.jpg" checked>
                                     <span class="color-circle" style="background-color: black;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="beige">
+                                <label class="color-radio" title="Beige">
+                                    <input type="radio" name="color" value="beige"  data-image="img/women/aothun_beige.jpg">
                                     <span class="color-circle" style="background-color: rgb(200, 173, 127);"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="blue">
+                                <label class="color-radio" title="Blue">
+                                    <input type="radio" name="color" value="blue" data-image="img/women/aothun_blue.jpg">
                                     <span class="color-circle" style="background-color: rgb(27, 121, 165);"></span>
                                 </label>
+                                    <button class="btnHeart btnIcon" title="Add to Wishlist">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
                             </div>
                         </div>
                     </div> 
@@ -52,98 +68,123 @@
                 <!-- card 2 -->
                 <div class="col-md-3 mb-4 ">      
                     <div class="card rounded-4" style="width:18rem;">
-                        <img src="img/women/tank_top/black.jpg" class="card-img-top" alt="">
+                        <div class="products-img"><a href="product_details.html"><img src="img/women/purple.jpg" class="card-img-top" alt=""></a></div>               
                         <div class="card-body">
-                            <h5 class="card-title">Ribbed Tank Top</h5>
-                            <p class="card-text">$16.65</p>
+                            <a href="product_details.html" class="product-name"><h5 class="card-title">Áo Sơ Mi Ngắn Nữ</h5></a>
+                            <p class="card-text">120.000 VND</p>
+                            <div class="size-selector"> S   M   L  X </div>
                             <div class="color-option">
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="black" checked>
-                                    <span class="color-circle" style="background-color: black;"></span>
+                                <button class="btnCart btnIcon" title="Add to Cart">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                                <label class="color-radio" title="Brown">
+                                    <input type="radio" name="color" value="brown" data-image="img/women/brown-2.jpg" checked>
+                                    <span class="color-circle" style="background-color: rgb(151, 121, 69);"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="beige">
-                                    <span class="color-circle" style="background-color: rgb(200, 173, 127);"></span>
+                                <label class="color-radio" title="Plum">
+                                    <input type="radio" name="color" value="plum" data-image="img/women/purple.jpg">
+                                    <span class="color-circle" style="background-color: plum;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="blue">
-                                    <span class="color-circle" style="background-color: rgb(27, 121, 165);"></span>
+                                <label class="color-radio" title="Light Green">
+                                    <input type="radio" name="color" value="light_green" data-image="img/women/green.jpg">
+                                    <span class="color-circle" style="background-color:lightgreen;"></span>
                                 </label>
+                                <button class="btnHeart btnIcon" title="Add to Wishlist">
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
                             </div>
                         </div>
                     </div> 
                 </div>
                <!-- card 3 -->
-               <div class="col-md-3 mb-4 ">      
+                <div class="col-md-3 mb-4 ">      
                     <div class="card rounded-4" style="width:18rem;">
-                        <img src="img/women/tank_top/black.jpg" class="card-img-top" alt="">
+                        <div class="products-img"><a href="product_details.html"><img src="img/women/black-12.jpg" class="card-img-top" alt=""></a></div>                      
                         <div class="card-body">
-                            <h5 class="card-title">Ribbed Tank Top</h5>
-                            <p class="card-text">$16.65</p>
+                            <a href="product_details.html" class="product-name"><h5 class="card-title">Áo Ba Lỗ Nữ</h5></a>
+                            <p class="card-text">75.000 VND</p>
+                            <div class="size-selector"> M   L  X</div>
                             <div class="color-option">
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="black" checked>
+                                    <button class="btnCart btnIcon" title="Add to Cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                <label class="color-radio" title="Orange">
+                                    <input type="radio" name="color" value="orange" data-image="img/women/orange-1.jpg" checked >
+                                    <span class="color-circle" style="background-color: orange;"></span>
+                                </label>
+                                <label class="color-radio" title="White">
+                                    <input type="radio" name="color" value="white" data-image="img/women/white-1.jpg">
+                                    <span class="color-circle" style="background-color: white;"></span>
+                                </label>
+                                <label class="color-radio" title="Black">
+                                    <input type="radio" name="color" value="black" data-image="img/women/black-12.jpg">
                                     <span class="color-circle" style="background-color: black;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="beige">
-                                    <span class="color-circle" style="background-color: rgb(200, 173, 127);"></span>
+                                    <button class="btnHeart btnIcon" title="Add to Wishlist">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                            </div>
+                        </div>
+                    </div> 
+                </div> 
+                <!-- card 4 -->
+                <div class="col-md-3 mb-4 ">      
+                    <div class="card rounded-4" style="width:18rem;">
+                        <div class="products-img"><a href="product_details.html"><img src="img/women/grey.jpg" class="card-img-top" alt=""></a></div>                      
+                        <div class="card-body">
+                            <a href="product_details.html" class=product-name><h5 class="card-title"> Đồ Bộ Nữ</h5></a>
+                            <p class="card-text">$10.00</p>
+                            <div class="size-selector"> M   L  X  XL</div>
+                            <div class="color-option">
+                                    <button class="btnCart btnIcon" title="Add to Cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                <label class="color-radio" title="Grey">
+                                    <input type="radio" name="color" value="grey" data-image="img/women/grey.jpg" checked>
+                                    <span class="color-circle" style="background-color: gray;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="blue">
-                                    <span class="color-circle" style="background-color: rgb(27, 121, 165);"></span>
+                                <label class="color-radio" title="Pink">
+                                    <input type="radio" name="color" value="Pink" data-image="img/women/pink-2.jpg">
+                                    <span class="color-circle" style="background-color: pink;"></span>
                                 </label>
+                                <label class="color-radio" title="Light Pink">
+                                    <input type="radio" name="color" value="light-pink" data-image="img/women/light-pink.jpg">
+                                    <span class="color-circle" style="background-color: lightpink;"></span>
+                                </label>
+                                    <button class="btnHeart btnIcon" title="Add to Wishlist">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
                             </div>
                         </div>
                     </div> 
                 </div>  
-                <!-- card 4 -->
-                <div class="col-md-3 mb-4 ">      
-                    <div class="card rounded-4" style="width:18rem;">
-                        <img src="img/women/tank_top/black.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Ribbed Tank Top</h5>
-                            <p class="card-text">$16.65</p>
-                            <div class="color-option">
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="black" checked>
-                                    <span class="color-circle" style="background-color: black;"></span>
-                                </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="beige">
-                                    <span class="color-circle" style="background-color: rgb(200, 173, 127);"></span>
-                                </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="blue">
-                                    <span class="color-circle" style="background-color: rgb(27, 121, 165);"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>    
              <!--row 2  -->
-             <div class="row g-2">
-                <!-- card 1 -->
                 <div class="col-md-3 mb-4 ">      
                     <div class="card rounded-4" style="width:18rem;">
-                        <img src="img/women/tank_top/black.jpg" class="card-img-top" alt="">
+                        <div class="products-img"><a href="product_details.html"><img src="img/man/black-4.jpg" class="card-img-top" alt=""></a></div>                      
                         <div class="card-body">
-                            <h5 class="card-title">Ribbed Tank Top</h5>
-                            <p class="card-text">$16.65</p>
+                            <a href="product_details.html" class="product-name"><h5 class="card-title">Áo Sơ Mi Nam</h5></a>
+                            <p class="card-text">200.000 VND</p>
+                            <div class="size-selector"> S   M   L </div>
                             <div class="color-option">
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="black" checked>
+                                    <button class="btnCart btnIcon" title="Add to Cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                <label class="color-radio" title="Black">
+                                    <input type="radio" name="color" value="black" data-image="img/man/black-4.jpg" checked>
                                     <span class="color-circle" style="background-color: black;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="beige">
-                                    <span class="color-circle" style="background-color: rgb(200, 173, 127);"></span>
+                                <label class="color-radio" title="Light Blue">
+                                    <input type="radio" name="color" value="light-blue" data-image="img/man/light-blue.jpg">
+                                    <span class="color-circle" style="background-color: lightblue;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="blue">
-                                    <span class="color-circle" style="background-color: rgb(27, 121, 165);"></span>
+                                <label class="color-radio" title="White">
+                                    <input type="radio" name="color" value="White" data-image="img/man/white-7.jpg">
+                                    <span class="color-circle" style="background-color: white;"></span>
                                 </label>
+                                    <button class="btnHeart btnIcon" title="Add to Wishlist">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
                             </div>
                         </div>
                     </div> 
@@ -151,47 +192,61 @@
                 <!-- card 2 -->
                 <div class="col-md-3 mb-4 ">      
                     <div class="card rounded-4" style="width:18rem;">
-                        <img src="img/women/tank_top/black.jpg" class="card-img-top" alt="">
+                        <div class="products-img"><a href="product_details.html"><img src="img/man/light-green-2.jpg" class="card-img-top" alt=""></a></div>                      
                         <div class="card-body">
-                            <h5 class="card-title">Ribbed Tank Top</h5>
-                            <p class="card-text">$16.65</p>
+                            <a href="product_details.html" class="product-name"><h5 class="card-title">Áo SweatShirt Nam</h5></a>
+                            <p class="card-text">220.000 VND</p>
+                            <div class="size-selector"> S   M   L </div>
                             <div class="color-option">
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="black" checked>
-                                    <span class="color-circle" style="background-color: black;"></span>
+                                    <button class="btnCart btnIcon" title="Add to Cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                <label class="color-radio" title="Light Green">
+                                    <input type="radio" name="color" value="light-green" data-image="img/man/light-green-2.jpg" checked>
+                                    <span class="color-circle" style="background-color: lightgreen;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="beige">
-                                    <span class="color-circle" style="background-color: rgb(200, 173, 127);"></span>
+                                <label class="color-radio" title="Light Grey">
+                                    <input type="radio" name="color" value="LightGrey" data-image="img/man/light-grey.jpg">
+                                    <span class="color-circle" style="background-color: lightgray;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="blue">
-                                    <span class="color-circle" style="background-color: rgb(27, 121, 165);"></span>
+                                <label class="color-radio" title=" Blue">
+                                    <input type="radio" name="color" value="blue" data-image="img/man/blue.jpg">
+                                    <span class="color-circle" style="background-color: blue;"></span>
                                 </label>
+                                    <button class="btnHeart btnIcon" title="Add to Wishlist">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
                             </div>
                         </div>
                     </div> 
                 </div>
                <!-- card 3 -->
-               <div class="col-md-3 mb-4 ">      
+                <div class="col-md-3 mb-4 ">      
                     <div class="card rounded-4" style="width:18rem;">
-                        <img src="img/women/tank_top/black.jpg" class="card-img-top" alt="">
+                        <div class="products-img"><a href="product_details.html"><img src="img/scarf.jpg" class="card-img-top" alt=""></a></div>                      
                         <div class="card-body">
-                            <h5 class="card-title">Ribbed Tank Top</h5>
-                            <p class="card-text">$16.65</p>
+                            <a href="product_details.html" class="product-name"><h5 class="card-title">Khăn Choàng</h5></a>                            
+                            <p class="card-text">180.000 VND</p>
+                            <div class="size-selector"> S   M   L  X</div>
                             <div class="color-option">
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="black" checked>
+                                    <button class="btnCart btnIcon" title="Add to Cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                <label class="color-radio" title="Black">
+                                    <input type="radio" name="color" value="black" data-image="img/scarf.jpg" checked>
                                     <span class="color-circle" style="background-color: black;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="beige">
-                                    <span class="color-circle" style="background-color: rgb(200, 173, 127);"></span>
+                                <label class="color-radio" title="Brown">
+                                    <input type="radio" name="color" value="brown" data-image="img/brown-4.jpg">
+                                    <span class="color-circle" style="background-color: rgb(151, 121, 69);"></span>
                                 </label>
-                                <label class="color-radio">
+                                <!-- <label class="color-radio" title="Blue">
                                     <input type="radio" name="color" value="blue">
                                     <span class="color-circle" style="background-color: rgb(27, 121, 165);"></span>
-                                </label>
+                                </label> -->
+                                    <button class="btnHeart btnIcon" title="Add to Wishlist">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
                             </div>
                         </div>
                     </div> 
@@ -199,30 +254,56 @@
                 <!-- card 4 -->
                 <div class="col-md-3 mb-4 ">      
                     <div class="card rounded-4" style="width:18rem;">
-                        <img src="img/women/tank_top/black.jpg" class="card-img-top" alt="">
+                        <div class="products-img"><a href="product_details.html"><img src="img/man/blue-2.jpg" class="card-img-top" alt=""></a></div>                        
                         <div class="card-body">
-                            <h5 class="card-title">Ribbed Tank Top</h5>
-                            <p class="card-text">$16.65</p>
+                            <a href="product_details.html" class="product-name"><h5 class="card-title"> Áo Hoodie Nam</h5></a>
+                            <p class="card-text">270.000 VND</p>
+                            <div class="size-selector"> M   L  X  XL</div>
                             <div class="color-option">
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="black" checked>
+                                    <button class="btnCart btnIcon" title="Add to Cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                <label class="color-radio" title="Black">
+                                    <input type="radio" name="color" value="black" data-image="img/man/black-7.jpg" checked>
                                     <span class="color-circle" style="background-color: black;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="beige">
-                                    <span class="color-circle" style="background-color: rgb(200, 173, 127);"></span>
+                                <label class="color-radio" title="Blue">
+                                    <input type="radio" name="color" value="blue" data-image="img/man/blue-2.jpg">
+                                    <span class="color-circle" style="background-color:blue;"></span>
                                 </label>
-                                <label class="color-radio">
-                                    <input type="radio" name="color" value="blue">
-                                    <span class="color-circle" style="background-color: rgb(27, 121, 165);"></span>
+                                <label class="color-radio" title="White">
+                                    <input type="radio" name="color" value="white" data-image="img/man/white-8.jpg">
+                                    <span class="color-circle" style="background-color: white"></span>
                                 </label>
+                                    <button class="btnHeart btnIcon" title="Add to Wishlist">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
                             </div>
                         </div>
                     </div> 
                 </div>
             </div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination pagination-sm justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true"><</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
      </div>
-     
+    </div>
     <!-- footer -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
