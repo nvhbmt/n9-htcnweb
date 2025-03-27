@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/spinner.css">
+    <script src="js/product.js"></script>
+    <script src="js/spinner.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -19,15 +22,33 @@
         crossorigin="anonymous"></script>
         <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <script src="js/product.js"></script>
 </head>
 
 <body>
     <!-- header -->
+     <!-- spinner load page -->
+        <div class="container-loadpage" id="spinner-page">
+            <div class="loader-page"></div>
+        </div>
+     <!-- end spiner load page -->
+     <!-- spinner search-->
+        <div class="loader" id="spinner">
+            <div class="loaderMiniContainer">
+                <div class="barContainer">
+                    <span class="bar"></span>
+                    <span class="bar bar2"></span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 101 114" class="svgIcon">
+                    <circle stroke-width="7" stroke="black" transform="rotate(36.0692 46.1726 46.1727)" r="29.5497" cy="46.1727" cx="46.1726"></circle>
+                    <line stroke-width="7" stroke="black" y2="111.784" x2="97.7088" y1="67.7837" x1="61.7089"></line>
+                </svg>
+            </div>
+        </div>
+      <!-- end spinner search -->
     <!-- content -->
     <div class="container px-0 position-relative">
         <div class="search">
-            <button class="btnSearch btnIcon"  onclick="searchProduct()">
+            <button class="btnSearch btnIcon"  onclick="searchProduct(); showSpinner();">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <input type="text" id="searchInput" class="txtSearch" placeholder="Search Here...">
