@@ -4,11 +4,11 @@ function showSpinner(){
 
     setTimeout(() => {
         spinner.style.display = "none";
-    }, 2500);
+    }, 1500);
 }
 
 window.onload = function(){
     setTimeout(() => {
         document.getElementById("spinner-page").style.display="none";
-    }, 2000);
+    }, 1000);
 };

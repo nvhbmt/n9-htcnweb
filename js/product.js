@@ -1,3 +1,5 @@
+
+// Đổi ảnh
 document.addEventListener("DOMContentLoaded", function () {
     const productCards = document.querySelectorAll(".card");
 
