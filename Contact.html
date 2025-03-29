@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/Contact.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/Contact.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=north_east" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../icon/fontello-5ce576f5/css/fontello.css">
+</head>
+<body>
+    <div class="conntainer">
+
+        <div class="row contact">
+            <h1>Contact Us</h1>
+        </div>
+
+        <div class="row m-0">
+            <iframe class="p-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8581690910287!2d106.68427047408805!3d10.822164158350361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1743086561938!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="row formcont m-0">
+            <div class="col-4">
+                <form action="">
+                    <h2 class="mb-4">Visit Our Store</h2>
+                    <p class="fw-bold">Address</p>
+                    <p>12 Nguyễn Văn Bảo, Phường 1, Gò Vấp, Hồ Chí Minh</p>
+                    <p class="fw-bold">Phone</p>
+                    <p>0238940390</p>
+                    <p class="fw-bold">Email</p>
+                    <p>iuh@gmail.com</p>
+                    <p class="fw-bold">Open Time</p>
+                    <p>Our store has re-opened for shopping,<br>
+                        exchange Every day 11am to 7pm
+                    </p>
+                    <div class="row">
+                        <ul>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-instagram"></i></a></li>
+                            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-gmail"></i></a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="col-5">
+                <form action="">
+                    <div class="row">
+                        <h2>Get in Touch</h2>
+                    </div>
+                    <div class="row">
+                        <p>If you’ve got great products your making or looking to work with us then drop us a line.</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row m-1">
+                                <input class="mb-1 mt-0 position-relative" type="text" id="txtName" placeholder=" " onblur="ktraten()">
+                                <label class="p-0 lb error-lb" id="lbName" for="txtName">Name</label>
+                            </div>
+                            <span id="errName" class="error ps-2"></span>
+                        </div>
+                        <div class="col-6">
+                            <div class="row m-1 me-2">
+                                <input class="mb-1 mt-0 position-relative" type="email" id="txtEmail" placeholder=" " onblur="ktraEmail()">
+                                <label class="p-0 lb" id="lbEmail" for="Email">Email</label>
+                            </div>
+                            <span id="errEmail" class="error ps-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="row ms-1">
+                        <div class="row">
+                            <textarea name="Message" id="Message" placeholder="" onblur="ktraMessage()"></textarea>
+                            <label class="p-0 lb lbMess" for="">Message</label>    
+                        </div>
+                        <span id="errMessage" class="error ps-2"></span>
+                    </div>
+
+                    <div class="row m-0 mt-5 mb-5">
+                        <button type="button" class="rounded p-2 fw-bold text-light bg-dark" onclick="btnSend()">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
