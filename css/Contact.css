@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact{
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+}
+
+.formcont{
+    padding-top: 50px;
+}
+
+.formcont{
+    display: flex;
+    justify-content: center;
+}
+
+.formcont .col-4,
+.formcont .col-5{
+    margin: 0 40px;
+}
+
+.formcont .col-4 ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.formcont .col-4 ul li a{
+    color: #000;
+    padding: 3px;
+}
+
+.formcont .col-4 ul li a:hover{
+    color: blue;
+}
+
+.row, .col-6 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    position: absolute;
+    left: 20px;
+    top: 50%; /* Giữ label ở giữa */
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    background: white;
+    padding: 0 5px;
+    pointer-events: none;  /* Vô hiệu hóa sự kiện chuột để input luôn nhận focus */
+}
+
+.lb{
+    width: 15%;
+}
+
+
+input:focus + label,
+textarea:focus +label,
+input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: black;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+}
+
+.error-border {
+    border: 2px solid red;
+}
+
+@media (max-width: 992px) {
+    .formcont {
+        flex-direction: column; /* Chuyển từ hàng ngang sang hàng dọc */
+        align-items: center;
+    }
+    .formcont .col-md-6 {
+        width: 100%; /* Chiếm toàn bộ màn hình trên thiết bị nhỏ */
+        margin-bottom: 30px;
+    }
+}
