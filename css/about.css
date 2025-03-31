@@ -1,0 +1,174 @@
+body {
+  padding-top: 88px;
+}
+
+.top-bar {
+  background-color: #fff;
+  font-size: 14px;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-icons i {
+  font-size: 18px;
+  margin-right: 15px;
+  position: relative;
+}
+
+.nav-icons div {
+  position: relative;
+  margin-right: 15px;
+}
+
+.badge-notify {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  padding: 2px 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+}
+
+.navbar {
+  background-color: #f9fcf7;
+}
+
+/*  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header_about {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.header_about img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(44%);
+  border-bottom-left-radius: 20%;
+  border-end-end-radius: 20%;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.text_about {
+  bottom: 100px;
+  left: 200px;
+  font-size: 30px;
+  animation: slideFromLeft 0.8s ease-in-out;
+}
+
+.text_about h1 {
+  font-weight: bold;
+  font-size: 70px;
+}
+
+.target,
+.heart,
+.person {
+  width: 100px;
+  height: 100px;
+}
+
+.card {
+  width: 20rem;
+  padding: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top {
+  height: 215px;
+}
+
+.card:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.member-item {
+  width: 15%;
+  height: 264px;
+}
+
+.hidden {
+  width: 228px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, background 0.3s ease-in-out;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.imghover {
+  transition: transform 0.3s ease-in-out;
+  border-radius: 50%;
+  height: 144px !important;
+}
+
+.imghover:hover {
+  transform: scale(1.1);
+}
+
+.member-item:hover .hidden {
+  opacity: 1;
+  background: #f9fcf7;
+  border: 1px solid black;
+}
+
+@media (max-width: 768px) {
+  .hidden {
+    position: relative;
+    right: 50px;
+  }
+}
+
+body {
+  min-width: 410px;
+}
+
+.contactUs_container {
+  background: #f5e4e4;
+  background: linear-gradient(90deg, #f5e4e4 0%, #e8fbff 80%);
+  background: -webkit-linear-gradient(90deg, #f5e4e4 0%, #e8fbff 80%);
+  background: -moz-linear-gradient(90deg, #f5e4e4 0%, #e8fbff 80%);
+}
+ .map{
+  height: 400px;
+ }
+
+ .map img{
+  height: 100%;
+  width: 100%;
+ }
