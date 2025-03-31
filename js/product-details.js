@@ -49,3 +49,27 @@ function searchProduct() {
         }
     });
 }
+
+function updateColor(element){
+    document.querySelector('#selectedColor').textContent = element.value;
+}
+
+function updateSize(element){
+    document.querySelector('#selectedSize').textContent = element.value;
+}
+
+
+function changeQuantity(amount) {
+        const count = document.querySelector(".txtNumber");
+        let values = parseInt(count.textContent);
+
+        values += amount;
+        if (values < 1) values = 1;
+
+        count.textContent = values;
+}
+
+function formatCurrency(amount) {
+    if (isNaN(amount)) amount = 0;
+    return amount.toLocaleString("vi-VN") + " VND";
+}
