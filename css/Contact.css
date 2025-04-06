@@ -5,6 +5,44 @@
     font-family: "Poppins", sans-serif;
 }
 
+.top-bar {
+    background-color: #fff;
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-icons i {
+    font-size: 18px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.nav-icons div {
+    position: relative;
+    margin-right: 15px;
+}
+
+.badge-notify {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 2px 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+}
+
+.navbar {
+    background-color: #f9fcf7;
+}
+
 .contact{
     height: 200px;
     text-align: center;
@@ -26,25 +64,130 @@
     margin: 0 40px;
 }
 
-.formcont .col-4 ul li{
-    list-style-type: none;
-    display: inline-block;
-}
-
-.formcont .col-4 ul li a{
-    color: #000;
-    padding: 3px;
-}
-
-.formcont .col-4 ul li a:hover{
-    color: blue;
-}
-
 .row, .col-6 {
     position: relative;
     margin-bottom: 20px;
+} 
+
+/* Danh sách các icon */
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 50px;
+    width: 50%;
+    justify-content: left;
+    margin: 0;
 }
 
+.wrapper li{
+    margin: 5px 10px;
+}
+  
+.wrapper .icon {
+    display: flex;
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    align-items: center;      /* Căn giữa theo chiều dọc */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Đổi hình dạng con trỏ chuột thành bàn tay */
+    /* cubic-bezier(0.68, -0.55, 0.265, 1.55): tạo ra hiệu ứng bật nảy (elastic bounce) nhẹ khi phần tử thay đổi.*/
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.wrapper .icon i {
+    font-size: 15px;  /* Điều chỉnh kích thước icon */
+    color: #000;  /* Màu sắc mặc định */
+}
+  
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none; /* khiến một phần tử không thể nhận tương tác từ chuột */
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible; /* Hiển thị phần tử đã bị ẩn*/
+    pointer-events: auto;
+}
+  
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+  
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+}
+  
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #ee3557;
+    color: #fff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+    background: #88c8ea;
+    color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+}
+
+
+.wrapper .gmail:hover,
+.wrapper .gmail:hover .tooltip,
+.wrapper .gmail:hover .tooltip::before {
+    background: #f69962;
+    color: #fff;
+}
+
+
+/* Form input và textarea */
 input, textarea {
     width: 100%;
     padding: 10px;
@@ -70,7 +213,6 @@ label {
     width: 15%;
 }
 
-
 input:focus + label,
 textarea:focus +label,
 input:not(:placeholder-shown) + label {
@@ -79,6 +221,7 @@ input:not(:placeholder-shown) + label {
     color: black;
 }
 
+/* Hiển thị lỗi */
 .error {
     color: red;
     font-size: 0.9em;
@@ -89,6 +232,56 @@ input:not(:placeholder-shown) + label {
     border: 2px solid red;
 }
 
+.btn_Send{
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    box-shadow: 0 0 10px gray;
+}
+  
+.btn_Send span {
+    margin: 10px;
+    width: 100%;
+}
+  
+.btn_Send::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 100%;
+    height: 20em;
+    text-align: center;
+    transition: box-shadow 0.4s ease-out;
+    z-index: -1;
+}
+  
+.btn_Send:hover {
+    color: #fff;
+    border: 1px solid rgb(40, 144, 241);
+}
+  
+.btn_Send:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(40, 144, 241);
+}
+
+/* Responsive */
 @media (max-width: 992px) {
     .formcont {
         flex-direction: column; /* Chuyển từ hàng ngang sang hàng dọc */

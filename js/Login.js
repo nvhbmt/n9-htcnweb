@@ -104,7 +104,7 @@ function btnLogin() {
     // Nếu tất cả đều hợp lệ thì sẽ đi đến trang khác
     if (validEmail && validPassword) {
         alert("Đăng nhập thành công!"); 
-        window.location.href = "../html/Contact.html";
+        window.location.href = "../Contact.html";
     }
 };
 
