@@ -70,6 +70,40 @@
         .col-7 h7 {
             margin-bottom: 24px;
         }
+
+        .dot-list {
+            display: flex;
+            gap: 16px;
+            padding: 0;
+        }
+
+        .dot-list li {
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            transition: 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dot-list li span {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 100%;
+        }
+
+        .dot-list li:hover span {
+            width: 60%;
+            height: 60%;
+        }
+
+        .dot-list li:hover {
+            border: 1px solid black;
+        }
     </style>
 </head>
 
@@ -106,7 +140,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Buy Now</a></li>
-                    <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
                 </ul>
 
                 <!-- Icons -->
@@ -150,25 +184,37 @@
                             <b>
                                 <h7>$16.95</h7>
                             </b>
+                            <ul class="dot-list">
+                                <li><span style="background-color: orange;" id="orange"></span>
+                                </li>
+                                <li><span style="background-color: black;" id="black"></span></li>
+                                <li><span style="background-color: white;" id="white"></span></li>
+                            </ul>
+
                         </div>
                         <div class="col-4">
                             <div class="img-contain">
                                 <img src="img/women/brown.jpg" alt="">
                             </div>
 
-                            <h7>Ribbed Tank Top</h7> <br>
+                            <h7>Ribbed modal T-shirt</h7> <br>
                             <b>
-                                <h7>$16.95</h7>
+                                <h7>From $18.95</h7>
                             </b>
+                            <ul class="dot-list">
+                                <li><span style="background-color: burlywood;" id="brown"></span></li>
+                                <li><span style="background-color: plum;" id="purple"></span></li>
+                                <li><span style="background-color: lightgreen;" id="green"></span></li>
+                            </ul>
                         </div>
                         <div class="col-4">
                             <div class="img-contain">
                                 <img src="img/women/white-1.jpg" alt="">
                             </div>
 
-                            <h7>Ribbed Tank Top</h7> <br>
+                            <h7>Oversized Printed T-shirt</h7> <br>
                             <b>
-                                <h7>$16.95</h7>
+                                <h7>$10.00</h7>
                             </b>
                         </div>
                     </div>
@@ -268,6 +314,54 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const colorToImage = {
+                orange: "orange-1.jpg",
+                black: "black-12.jpg",
+                white: "white-1.jpg",
+                pink: "pink-2.jpg",
+                brown: "brown.jpg",
+                green: "green.jpg",
+                purple: "purple.jpg",
+                beige: "beige.jpg"
+            };
+
+            const imageContainers = document.querySelectorAll(".img-contain");
+
+            imageContainers.forEach(container => {
+                const img = container.querySelector("img");
+                const originalSrc = img.src;
+                let selectedColor = null; // màu đã được chọn
+
+                const dots = container.parentElement.querySelectorAll(".dot-list li");
+
+                dots.forEach(dot => {
+                    const colorSpan = dot.querySelector("span");
+                    if (!colorSpan) return;
+
+                    const color = colorSpan.id;
+
+                    // Khi rê chuột (hover)
+                    dot.addEventListener("mouseover", () => {
+                        if (selectedColor === null && colorToImage[color]) {
+                            img.src = `img/women/${colorToImage[color]}`;
+                        }
+                    });
+
+                    // Khi rời chuột
+                    dot.addEventListener("mouseout", () => {
+                        if (selectedColor === null) {
+                            img.src = originalSrc;
+                        }
+                    });
+
+                });
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
