@@ -10,7 +10,7 @@
   font-style: italic;
 }
 
-.cart{
+.cart {
   min-width: 420px;
 }
 
@@ -22,7 +22,9 @@
   height: 30px;
 }
 
-.header, .top, .thanhtoan {
+.header,
+.top,
+.thanhtoan {
   width: 70%;
   margin: auto;
 }
@@ -65,12 +67,18 @@ input[type="checkbox"] {
   min-width: 400px;
 }
 
-.item:hover, .mavoucher:hover {
+.item:hover,
+.mavoucher:hover {
   background-color: rgb(248, 245, 245);
   cursor: pointer;
 }
 
-.total_container{
+.chat:hover,
+.back:hover {
+  cursor: pointer;
+}
+
+.total_container {
   height: 110px;
   background-color: white;
   margin: auto;
@@ -79,13 +87,13 @@ input[type="checkbox"] {
 .top > a {
   text-decoration: none;
   color: black;
-} 
-
-.top a:last-child p{
-  color: gray
 }
 
-.allProduct{
+.top a:last-child p {
+  color: gray;
+}
+
+.allProduct {
   width: 20px !important;
   height: 20px !important;
 }
@@ -119,26 +127,33 @@ input[type="checkbox"] {
   height: 500px;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   animation: popupVoucherFadeIn 0.3s ease-out;
 }
 
-.voucherPopup .btn-close, .chatPopup .btn-close {
+.voucherPopup .btn-close,
+.chatPopup .btn-close {
   cursor: pointer;
   z-index: 2;
 }
 
 @keyframes popupVoucherFadeIn {
-  from { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
-  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
-.text_voucher p{
+.text_voucher p {
   line-height: 0;
   margin-bottom: 25px;
 }
 
-.voucher_item{
+.voucher_item {
   height: 140px;
 }
 
@@ -150,7 +165,10 @@ input[type="checkbox"] {
 .disabled_item::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(255, 255, 255, 0.5);
   pointer-events: all;
 }
@@ -180,7 +198,8 @@ input[type="checkbox"] {
   animation: popupChatFadeIn 0.3s ease-out;
 }
 
-.icon_chat svg, .send {
+.icon_chat svg,
+.send {
   height: 25px;
   width: 25px;
 }
@@ -192,6 +211,12 @@ input[type="checkbox"] {
 }
 
 @keyframes popupChatFadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
