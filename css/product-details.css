@@ -287,3 +287,74 @@
     flex: 1;
     padding: 10px;
 }
+
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 200px; /* ảnh nhỏ lại cho dễ nhìn */
+    }
+
+    .btnIcon {
+        width: 35px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .product-name {
+        font-size: 16px;
+    }
+
+    .color-radio {
+        width: 25px;
+        height: 25px;
+    }
+
+    .color-circle {
+        width: 20px;
+        height: 20px;
+    }
+
+    .after-discount {
+        font-size: 20px;
+    }
+
+    .before-discount {
+        font-size: 14px;
+    }
+
+    .btnSize {
+        width: 40px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .container-buy {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .addCart, .buy {
+        width: 100%;
+    }
+
+    .ship {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+
+    .body-describe {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        padding: 0;
+    }
+
+    .describle,
+    .label {
+        font-size: 16px;
+    }
+}
