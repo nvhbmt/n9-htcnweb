@@ -88,41 +88,45 @@
     </nav>
 
     <!-- content -->
-    <div class="container-fluid poppins-light">
+    <div class="container poppins-light">
         <div class="header-content text-center d-flex justify-content-center align-items-center">
-            <h1>Add New Address</h1>
+            <h1>Thêm Địa Chỉ Mới</h1>
         </div>
         <div class="main-content py-5">
             <div class="form-wrapper">
                 <form>
                     <div class="mb-3">
-                        <label for="fullName" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="fullName" placeholder="e.g. John Doe">
+                        <label for="fullName" class="form-label">Họ và tên</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="ví dụ: Nguyễn Văn A"
+                            required>
                     </div>
                     <div class="mb-3">
-                        <label for="addressLine" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="addressLine" placeholder="1234 Main St">
+                        <label for="addressLine" class="form-label">Địa chỉ</label>
+                        <input type="text" class="form-control" id="addressLine" placeholder="1234 Đường Chính"
+                            required>
                     </div>
                     <div class="mb-3">
-                        <label for="city" class="form-label">City</label>
-                        <input type="text" class="form-control" id="city" placeholder="New York">
+                        <label for="city" class="form-label">Thành phố</label>
+                        <input type="text" class="form-control" id="city" placeholder="Hà Nội" required>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <label for="email" class="form-label">Địa chỉ Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="ten@example.com" required>
                     </div>
                     <div class="mb-3">
-                        <label for="phone" class="form-label">Phone</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="(212) 555-1234">
+                        <label for="phone" class="form-label">Số điện thoại</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="(084) 123-4567" required
+                            pattern="^0[0-9]{9}$">
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-dark">Save Address</button>
-                        <a href="Address.html" class="btn btn-outline-secondary ms-2">Cancel</a>
+                        <button type="submit" id="saveBtn" class="btn btn-dark" disabled>Lưu Địa Chỉ</button>
+                        <a href="Address.html" class="btn btn-outline-secondary ms-2">Hủy</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
 
     <!-- footer -->
     <footer class="bg-light pt-5 pb-3 mt-5 border-top">
@@ -198,6 +202,21 @@
             </div>
         </div>
     </footer>
+    <script>
+        const form = document.querySelector('form');
+        const saveBtn = document.getElementById('saveBtn');
+
+        form.addEventListener('input', () => {
+            saveBtn.disabled = !form.checkValidity();
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (form.checkValidity()) {
+                window.location.href = "AdressInfor.html"
+            }
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
