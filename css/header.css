@@ -39,3 +39,7 @@ body {
 .navbar {
     background-color: #f9fcf7;
 }
+
+.text-dark{
+    text-decoration: none;
+}
