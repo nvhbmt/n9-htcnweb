@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="./js/spinner.js"></script>
+    <script src="./js/jquery.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -37,7 +39,9 @@
     <!-- header -->
     <nav class="navbar navbar-expand-lg fixed-top" style="top: 30px;">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">ecomus</a>
+            <a class="navbar-brand fw-bold" href="./index.html">
+                ShopN6
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,86 +49,37 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <!-- Left menu -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Home 1</a></li>
-                            <li><a class="dropdown-item" href="#">Home 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Shop 1</a></li>
-                            <li><a class="dropdown-item" href="#">Shop 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Product 1</a></li>
-                            <li><a class="dropdown-item" href="#">Product 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Page 1</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Blog 1</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Buy now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./products.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">Về chúng tôi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./support.html">Hỗ trợ</a></li>
                 </ul>
-
                 <!-- Icons -->
                 <div class="nav-icons d-flex align-items-center">
-                    <i class="bi bi-search"></i>
-                    <i class="bi bi-person"></i>
-                    <i class="bi bi-heart">
-                        <span class="badge-notify">0</span>
-                    </i>
-                    <i class="bi bi-cart">
-                        <span class="badge-notify">0</span>
-                    </i>
+                    <a href="./AccountDetails.html"><i class="bi bi-person"></i></a>
+                    <a href="./cart.html">
+                        <i class="bi bi-cart">
+                            <span class="badge-notify">0</span>
+                        </i>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
+    <!-- spinner load page -->
+    <div class="container-loadpage" id="spinner-page">
+        <div class="loader-page"></div>
+    </div>
     <!-- content -->
     <!-- Carousel -->
     <div id="fashionCarousel" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicators -->
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#fashionCarousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#fashionCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
         </div>
 
         <!-- Slides -->
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://themesflat.co/html/ecomus/images/slider/fashion-slideshow-02.jpg"
-                    class="d-block w-100" alt="Slide 1">
-                <div class="carousel-caption">
-                    <h1>Glamorous<br>Glam</h1>
-                    <p>From casual to formal, we've got you covered</p>
-                    <a href="#" class="btn-shop">Shop collection &nbsp; <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://themesflat.co/html/ecomus/images/slider/fashion-slideshow-03.jpg"
-                    class="d-block w-100" alt="Slide 2">
-                <div class="carousel-caption">
-                    <h1>New Arrivals<br>Now Live</h1>
-                    <p>Fresh fashion just landed</p>
-                    <a href="#" class="btn-shop">Shop now &nbsp; <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+
         </div>
     </div>
     <section class="py-5">
@@ -380,7 +335,7 @@
             <div class="row">
                 <!-- Logo + Contact -->
                 <div class="col-md-3 mb-4">
-                    <h4 class="fw-bold">ecomus</h4>
+                    <h4 class="fw-bold">ShopN6</h4>
                     <p class="mb-1">Address: 1234 Fashion Street, Suite 567,<br>New York, NY 10001</p>
                     <p class="mb-1">Email: <a href="mailto:info@fashionshop.com">info@fashionshop.com</a></p>
                     <p class="mb-1">Phone: <a href="tel:2125551234">(212) 555-1234</a></p>
@@ -466,6 +421,66 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <script>
+        const carouselData = [{
+            image: "https://themesflat.co/html/ecomus/images/slider/fashion-slideshow-02.jpg",
+            title: "Phong Cách Quyến Rũ",
+            description: "Từ thường ngày đến trang trọng, chúng tôi đều có",
+            buttonText: "Xem bộ sưu tập",
+            buttonLink: "./products.html"
+        },
+        {
+            image: "https://themesflat.co/html/ecomus/images/slider/fashion-slideshow-03.jpg",
+            title: "Hàng Mới Về",
+            description: "Thời trang mới vừa cập bến",
+            buttonText: "Mua ngay",
+            buttonLink: "./products.html"
+        }]
+
+        const bestSeller = [{
+            image: "https://themesflat.co/html/ecomus/images/products/purple.jpg",
+            title: "Ribbed Tank Top",
+            price: "$16.95"
+        },
+        {
+            image: "https://themesflat.co/html/ecomus/images/products/purple.jpg",
+            title: "Ribbed modal T-shirt",
+            price: "From $18.95"
+        },
+        {
+            image: "https://themesflat.co/html/ecomus/images/products/purple.jpg",
+            title: "Oversized Printed T-shirt",
+            price: "$10.00"
+        },
+        {
+            image: "https://themesflat.co/html/ecomus/images/products/purple.jpg",
+            title: "Oversized Printed T-shirt",
+            price: "$16.95"
+        }]
+
+
+        $(document).ready(function () {
+            carouselData.forEach((item, index) => {
+                $('#fashionCarousel .carousel-indicators').append(`
+                    <button type="button" data-bs-target="#fashionCarousel" data-bs-slide-to="${index}"
+                        class="${index === 0 ? 'active' : ''}" aria-current="${index === 0 ? 'true' : 'false'}"
+                        aria-label="Slide ${index + 1}"></button>
+                `)
+                $('#fashionCarousel .carousel-inner').append(`
+                    <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                        <img src="${item.image}"
+                            class="d-block w-100" alt="Slide ${index + 1}">
+                        <div class="carousel-caption">
+                            <h1>${item.title}</h1>
+                            <p>${item.description}</p>
+                            <a href="${item.buttonLink}" class="btn-shop">${item.buttonText} &nbsp; <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                `)
+            })
+        });
+
+    </script>
 </body>
 
 </html>
