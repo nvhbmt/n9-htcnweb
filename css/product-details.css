@@ -1,0 +1,289 @@
+.breadcrumb>li>a{
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrumb>li>a:hover{
+    color: red;
+}
+.card{
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px,4px,10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+
+.card-title{
+    text-decoration: none;
+}
+.products-img{
+    overflow: hidden;
+}
+
+.product-name{
+    text-decoration: none; 
+    color: black;
+}
+
+.product-name:hover{
+    color: red;
+}
+.card-img-top{
+    position: relative;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-img-top:hover{
+    transform: scale(1.3);
+}
+
+.card-body{
+    z-index: 10;
+    text-align: center;
+}
+
+.color-option{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-radio{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: inline-block; 
+}
+
+.color-radio input{
+    position: absolute;
+    opacity: 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.color-circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.color-radio input:hover + .color-circle{
+    border: 5px solid #fcf8f8;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4);
+}
+.btnIcon{
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: white;
+    border: solid 0.1px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btnCart{
+    margin-right: 15px;
+}
+
+.btnHeart{
+    margin-left: 15px;
+}
+.btnHeart:hover{
+    transform: scale(1.1);
+    background-color: lightpink;
+    color: aliceblue;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.btnCart:hover{
+    transform: scale(1.1);
+    background-color: lightblue;
+    color: aliceblue;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.price{
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.after-discount{
+    font-size: 24px;
+    color: #fc5732;
+}
+
+.before-discount{
+    margin-top: 5px;
+    text-decoration :line-through;
+    opacity: 60%;
+}
+
+.sell{
+    border: 2px solid #fc5732;
+    padding:6px 15px;
+    border-radius: 30px 30px;
+    color: white;
+    background-color: #fc5732;
+}
+
+.evalueBar{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.label-evalue{
+    margin-top: 3px;
+}
+
+.labelSelected{
+    font-weight: bold;
+}
+
+.describle{
+    font-size: 18px;
+}
+
+.label{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.quantity{
+    display: inline-flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px 10px;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.btnQuantity{
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.btnQuantity:hover{
+    color: red;
+}
+.txtNumber{
+    width: 30px;
+    text-align: center;
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.sizeSelected{
+    margin-bottom: 50px;
+}
+.btnSize{
+    width: 50px;
+    height: 45px;
+    margin-right: 5px;
+    border-radius: 10px;
+    border:1px solid lightgray;
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btnSize:hover{
+    border-color: black;
+}
+
+.btnSize:focus{
+    background-color: black;
+    color: #f5f5f5;
+    transform: scale(1.05);
+}
+
+.container-buy{
+    display:flex;
+    gap: 20px;
+}
+
+.btn-buy{
+    height: 50px;
+    font-size: 18px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.addCart{
+    width: 50%;
+    background-color: black;
+    color: white;
+    transition: transform 0.15s ease-in-out;
+}
+
+.buy{
+    width: 50%;
+    background-color: #ffc520;
+    transition: transform 0.15s ease-in-out;
+}
+
+.addCart:hover{
+    transform: scale(1.03);
+}
+
+.buy:hover{
+    transform: scale(1.03);
+}
+
+.ship{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-box{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow:0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+.icon{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.body-describe{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.container-describe{
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.left, .right{
+    flex: 1;
+    padding: 10px;
+}

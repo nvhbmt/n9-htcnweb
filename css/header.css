@@ -1,0 +1,45 @@
+body {
+    padding-top: 88px;
+}
+
+.top-bar {
+    background-color: #fff;
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-icons i {
+    font-size: 18px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.nav-icons div {
+    position: relative;
+    margin-right: 15px;
+}
+
+.badge-notify {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 2px 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+}
+
+.navbar {
+    background-color: #f9fcf7;
+}
+
+.text-dark{
+    text-decoration: none;
+}

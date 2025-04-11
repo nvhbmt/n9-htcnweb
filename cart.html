@@ -7,6 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/spinner.css" />
+    <script src="js/spinner.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -26,6 +33,11 @@
     <script src="/js/cart.js"></script>
   </head>
   <body>
+    <!-- spinner load page -->
+    <div class="container-loadpage" id="spinner-page">
+      <div class="loader-page"></div>
+    </div>
+    <!-- end spiner load page -->
     <!-- content -->
     <div class="container-fluid px-0 cart">
       <!-- Control Pane -->
@@ -58,114 +70,7 @@
         <!-- Product -->
         <div class="data pt-3">
           <div class="item-list">
-            <div class="item mb-3 rounded-4" data-id="1">
-              <div
-                class="row g-0 text-decoration-none text-dark align-items-center"
-              >
-                <div class="col-2 d-flex align-items-center gap-2 p-3">
-                  <input type="checkbox" class="chonSanPham" />
-                  <div class="img_product">
-                    <img
-                      src="/img/cart/aothun_black.jpg"
-                      alt=""
-                      class="img-fluid rounded-4"
-                    />
-                  </div>
-                </div>
-                <div class="col-10 ps-0 pe-5">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div>
-                      <h3 class="mb-0">Áo NIKE</h3>
-                      <p class="text-danger mb-0 fw-bold">&#8363;150.000</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <div class="counter me-3">
-                        <button
-                          class="btn btn-outline-secondary counter-decrease"
-                        >
-                          -
-                        </button>
-                        <span class="fs-5 counter-value">1</span>
-                        <button
-                          class="btn btn-outline-secondary counter-increase"
-                        >
-                          +
-                        </button>
-                      </div>
-                      <div class="delete_product">
-                        <svg
-                          class="trash"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                        >
-                          <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                          <path
-                            fill="#74C0FC"
-                            d="M170.5 51.6L151.5 80l145 0-19-28.4c-1.5-2.2-4-3.6-6.7-3.6l-93.7 0c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80 368 80l48 0 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-8 0 0 304c0 44.2-35.8 80-80 80l-224 0c-44.2 0-80-35.8-80-80l0-304-8 0c-13.3 0-24-10.7-24-24S10.7 80 24 80l8 0 48 0 13.8 0 36.7-55.1C140.9 9.4 158.4 0 177.1 0l93.7 0c18.7 0 36.2 9.4 46.6 24.9zM80 128l0 304c0 17.7 14.3 32 32 32l224 0c17.7 0 32-14.3 32-32l0-304L80 128zm80 64l0 208c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-208c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0l0 208c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-208c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0l0 208c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-208c0-8.8 7.2-16 16-16s16 7.2 16 16z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item mb-3 rounded-4" data-id="1">
-              <div
-                class="row g-0 text-decoration-none text-dark align-items-center"
-              >
-                <div class="col-2 d-flex align-items-center gap-2 p-3">
-                  <input type="checkbox" class="chonSanPham" />
-                  <div class="img_product">
-                    <img
-                      src="/img/cart/aothun_black.jpg"
-                      alt=""
-                      class="img-fluid rounded-4"
-                    />
-                  </div>
-                </div>
-                <div class="col-10 ps-0 pe-5">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div>
-                      <h3 class="mb-0">Áo NIKE</h3>
-                      <p class="text-danger mb-0 fw-bold">&#8363;150.000</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <div class="counter me-3">
-                        <button
-                          class="btn btn-outline-secondary counter-decrease"
-                        >
-                          -
-                        </button>
-                        <span class="fs-5 counter-value">1</span>
-                        <button
-                          class="btn btn-outline-secondary counter-increase"
-                        >
-                          +
-                        </button>
-                      </div>
-                      <div class="delete_product">
-                        <svg
-                          class="trash"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                        >
-                          <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                          <path
-                            fill="#74C0FC"
-                            d="M170.5 51.6L151.5 80l145 0-19-28.4c-1.5-2.2-4-3.6-6.7-3.6l-93.7 0c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80 368 80l48 0 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-8 0 0 304c0 44.2-35.8 80-80 80l-224 0c-44.2 0-80-35.8-80-80l0-304-8 0c-13.3 0-24-10.7-24-24S10.7 80 24 80l8 0 48 0 13.8 0 36.7-55.1C140.9 9.4 158.4 0 177.1 0l93.7 0c18.7 0 36.2 9.4 46.6 24.9zM80 128l0 304c0 17.7 14.3 32 32 32l224 0c17.7 0 32-14.3 32-32l0-304L80 128zm80 64l0 208c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-208c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0l0 208c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-208c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0l0 208c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-208c0-8.8 7.2-16 16-16s16 7.2 16 16z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!-- Sản phẩm từ product-details -->
           </div>
         </div>
         <!-- Total price -->
@@ -224,7 +129,8 @@
               <p class="fw-bold">Voucher</p>
             </div>
             <div>
-              <input class="me-1"
+              <input
+                class="me-1"
                 type="text"
                 placeholder="Nhập Cô Hà Xinh để được miễn phí 100%"
                 size="35"
@@ -329,7 +235,9 @@
             <div class="btn-close" onclick="togglePopup()"></div>
           </div>
           <div class="d-flex gap-2 flex-column align-items-center">
-            <div class="containText d-flex align-items-center justify-content-center">
+            <div
+              class="containText d-flex align-items-center justify-content-center"
+            >
               <p class="fs-1 poppins-extralight-italic">Nhóm 9</p>
             </div>
             <div class="icon_chat d-flex gap-3 border-top p-2">
@@ -353,13 +261,13 @@
               </div>
               <div>
                 <input
-                type="text"
-                name=""
-                id=""
-                class="rounded-5 p-1"
-                size="35"
-                placeholder="   Bạn cần hỗ trợ vấn đề gì"
-              />
+                  type="text"
+                  name=""
+                  id=""
+                  class="rounded-5 p-1"
+                  size="35"
+                  placeholder="   Bạn cần hỗ trợ vấn đề gì"
+                />
               </div>
               <div class="send">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
