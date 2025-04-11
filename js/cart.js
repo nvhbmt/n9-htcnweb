@@ -188,4 +188,11 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("beforeunload", function () {
     localStorage.removeItem("cart");
   });
+// Sự kiện trở về product
+  const backBtn = document.querySelector(".back");
+  if (backBtn) {
+    backBtn.addEventListener("click", function () {
+      window.location.href = "products.html";
+    });
+  }
 });
