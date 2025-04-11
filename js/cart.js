@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Delete functionality - only removes from DOM temporarily
+  // Hàm xóa sản phẩm
   document.querySelectorAll('.delete_product').forEach(deleteBtn => {
     deleteBtn.addEventListener('click', function() {
       const item = this.closest('.item');
       if (item) {
-        // Simply remove the item from DOM
         item.remove();
-        // Update cart summary after deletion
         updateCartSummary();
       }
     });
   });
 
-  // Counter functionality
+  // Hàm tăng số lượng
   document.body.addEventListener("click", function (e) {
     if (e.target.classList.contains("counter-increase")) {
       const counter = e.target.closest(".counter");
@@ -35,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Product selection functionality
+  // Hàm chọn sản phẩm để tính giá
   document.body.addEventListener("change", function (e) {
     if (e.target.classList.contains("chonSanPham")) {
       updateCartSummary();
@@ -59,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Add click event for chat button
   const chatBtn = document.getElementById("chatBtn");
   if (chatBtn) {
     chatBtn.addEventListener("click", function (e) {
@@ -68,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Close chat popup when clicking close button
   const closeChatBtn = document.querySelector("#chatPopup .btn-close");
   if (closeChatBtn) {
     closeChatBtn.addEventListener("click", toggleChatPopup);
@@ -79,12 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("voucherPopup");
     if (popup) {
       popup.classList.toggle("active");
-      // Prevent scroll when popup is open
       document.body.style.overflow = popup.classList.contains("active") ? "hidden" : "";
     }
   }
 
-  // Add click event for voucher button
   const voucherBtn = document.getElementById("voucherBtn");
   if (voucherBtn) {
     voucherBtn.addEventListener("click", function(e) {
@@ -93,13 +87,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Close popup when clicking close button
   const closeBtn = document.querySelector(".voucherPopup .btn-close");
   if (closeBtn) {
     closeBtn.addEventListener("click", togglePopup);
   }
 
-  // Update cart summary
+  // Cập nhập cart
   function updateCartSummary() {
     let totalAmount = 0;
     let selectedCount = 0;
@@ -122,8 +115,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("soLuongHang").textContent = `(${selectedCount})`;
   }
 
-  // Format currency
+  // Format tiền tệ
   function formatCurrency(amount) {
     return "₫" + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   }
+
+  
+
 });
