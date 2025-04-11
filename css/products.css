@@ -1,3 +1,4 @@
+
 .card{
     border-radius: 20px;
     overflow: hidden;
@@ -221,4 +222,58 @@
 
 .breadcrumb>li>a:hover{
     color: red;
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 200px; /* Giảm chiều cao ảnh */
+    }
+
+    .card-body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .color-radio {
+        width: 24px;
+        height: 24px;
+    }
+
+    .color-circle {
+        width: 20px;
+        height: 20px;
+    }
+
+    .btnIcon {
+        width: 32px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .pagination .page-item .page-link {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .search {
+        width: 90%;
+        height: 50px;
+    }
+
+    .txtSearch {
+        width: 100%;
+        padding-left: 40px;
+        font-size: 14px;
+    }
+
+    .btnSearch {
+        left: 15px;
+        font-size: 16px;
+    }
+
+    .size-selector {
+        font-size: 12px;
+        bottom: 110px;
+    }
 }
