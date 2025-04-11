@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AccountDetails</title>
+    <title>Address</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -42,19 +42,12 @@
             color: red;
         }
 
-        .col-7 input,
         .col-7 button {
-            width: 100%;
+            padding: 8px 24px;
         }
 
-        .col-7 input {
-            padding: 12px 0 0 12px;
-            margin-bottom: 24px;
-        }
-
-        .col-7 h2 {
-            font-weight: 400;
-            margin-bottom: 24px;
+        .col-6 button {
+            margin-left: 12px;
         }
     </style>
 </head>
@@ -110,7 +103,7 @@
         </div>
     </nav>
     <!-- content -->
-    <div class="container-fluid">
+    <div class="container-fluid poppins-light">
         <div class="header-content text-center d-flex justify-content-center align-items-center poppins-light">
             <h1>My Account</h1>
         </div>
@@ -119,31 +112,40 @@
                 <div class="col-4" style="margin-left: 32px;">
                     <a class="btn form-check d-block" href="Dashboard.html">Dashboard</a>
                     <a class="btn form-check d-block" href="Ordersinfo.html">Orders</a>
-                    <a class="btn form-check d-block" href="AdressInfor.html">Address</a>
                     <a class="btn form-check d-block" href="#"
-                        style="background-color: #F2F2F2; color: red; border: 0;">Account Details</a>
+                        style="background-color: #F2F2F2; color: red; border: 0;">Address</a>
+                    <a class="btn form-check d-block" href="AccountDetails.html">Account Details</a>
                     <a class="btn form-check d-block" href="Wishlist.html">Wishlist</a>
                     <a class="btn form-check d-block" href="">Logout</a>
                 </div>
-                <div class="col-7 mt-2 poppins-light">
-                    <form action="" style="margin-top: 4px;">
-                        <input type="text" name="" id="" class="form-check" placeholder="First name">
-                        <input type="text" name="" id="" class="form-check" placeholder="Last name">
-                        <input type="email" name="" id="" class="form-check" placeholder="Email">
-                        <div class="row">
-                            <h2 style="font-weight: 300;">Password Change</h2>
+                <div class="col-7 mt-2 text-center">
+                    <a href="AddNewAddress.html"><button class="btn btn-dark">Add a new address</button></a>
+                    <div class="row">
+                        <div class="col-6">
+                            <h3>Default</h3>
+                            <p>themesflat</p>
+                            <p>1234 Fashion Street, Suite 567</p>
+                            <p>New York</p>
+                            <p>info@fashionshop.com</p>
+                            <p>(212) 555-1234</p>
+                            <button toggle="form-open" class="btn btn-dark">Edit</button><button
+                                class="btn border border-3">Delete</button>
                         </div>
-                        <input type="password" name="" id="" class="form-check" placeholder="Current password">
-                        <input type="password" name="" id="" class="form-check" placeholder="New password">
-                        <input type="password" name="" id="" class="form-check" placeholder="Confirm password">
-
-                        <button class="btn btn-dark">Save Changes</button>
-                    </form>
+                        <div class="col-6">
+                            <h3>Default</h3>
+                            <p>themesflat</p>
+                            <p>1234 Fashion Street, Suite 567</p>
+                            <p>New York</p>
+                            <p>info@fashionshop.com</p>
+                            <p>(212) 555-1234</p>
+                            <button toggle="form-open" class="btn btn-dark">Edit</button><button
+                                class="btn border border-3">Delete</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- footer -->
     <footer class="bg-light pt-5 pb-3 mt-5 border-top">
         <div class="container">
