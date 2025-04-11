@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/Login.css">
-    <script src="./js/jquery.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/Login.js"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=north_east" />
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/Login.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=north_east" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="container w-50">
         <form action="">
             <div class="row">
-                <h1 class="p-0 mb-4">Log in</h1>
+                <h1 class="p-0 mb-4">Đăng nhập</h1>
             </div>
             <div class="row mb-4">
                 <div class="row mb-0">
-                    <input class="mb-1 mt-0 position-relative" type="email" id="txtEmail" placeholder=" "
-                        onblur="ktraEmail()">
+                    <input class="mb-1 mt-0 position-relative" type="email" id="txtEmail" placeholder=" " onblur="ktraEmail()">
                     <label class="p-0 lb" for="">Email *</label>
                 </div>
                 <span id="errEmail" class="error ps-2"></span>
@@ -36,27 +30,23 @@
 
             <div class="row mb-4">
                 <div class="row mb-0">
-                    <input class="mb-1 mt-0 position-relative" type="password" id="txtPassword" placeholder=" "
-                        onblur="ktraPassword()">
-                    <label class="p-0 lb" for="">Password *</label>
+                    <input class="mb-1 mt-0 position-relative" type="password" id="txtPassword" placeholder=" " onblur="ktraPassword()">
+                    <label class="p-0 lb" for="">Mật khẩu *</label>
                 </div>
                 <span id="errPassword" class="error ps-2"></span>
             </div>
             <div class="row d-inline-block">
-                <a class="forgot" href="../ResetPassword.html">Forgot your password?</a>
+                <a class="forgot" href="../ResetPassword.html">Quên mật khẩu?</a>
             </div>
             <div class="row mt-3">
                 <div class="col-6 p-0 pe-2">
-                    <button type="button" class="rounded w-100 p-2 border-0 bg-dark text-light fw-bold btn"
-                        onclick="btnLogin()"><span class="text">Log in</span></button>
+                    <button type="button" class="rounded w-100 p-2 border-0 bg-dark text-light fw-bold btn" onclick="btnLogin()"><span class="text">Đăng nhập</span></button>
                 </div>
                 <div class="col-6 p-0 ps-2 new">
-                    <a class="new" href="../Register.html">New customer? Create your account <span
-                            class="material-symbols-outlined" style="font-size: 13px;">north_east</span></a>
+                    <a class="new" href="../Register.html">Khách hàng mới? Tạo tài khoản. <span class="material-symbols-outlined" style="font-size: 13px;">north_east</span></a>
                 </div>
             </div>
         </form>
     </div>
 </body>
-
 </html>
