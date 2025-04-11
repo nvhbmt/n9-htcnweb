@@ -73,3 +73,45 @@ function formatCurrency(amount) {
     if (isNaN(amount)) amount = 0;
     return amount.toLocaleString("vi-VN") + " VND";
 }
+
+document.querySelector('.addCart').addEventListener('click', function () {
+    // Lấy thông tin sản phẩm
+    const name = document.querySelector('.product-infor h2').innerText;
+    const priceText = document.querySelector('.after-discount').innerText;
+    const price = parseInt(priceText.replace(/[^\d]/g, '')); // Lấy số từ chuỗi "105.000 VND"
+    const color = document.querySelector('input[name="color"]:checked').value;
+    const size = document.getElementById('selectedSize').innerText;
+    const quantity = parseInt(document.querySelector('.txtNumber').innerText);
+    const image = document.querySelector('.col-md-6 img').getAttribute('src');
+
+    const product = {
+      name,
+      price,
+      color,
+      size,
+      quantity,
+      image
+    };
+
+    // Lấy giỏ hàng từ localStorage hoặc tạo mới
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Kiểm tra nếu sản phẩm đã tồn tại (cùng tên, size, màu)
+    const existing = cart.find(item =>
+      item.name === product.name &&
+      item.color === product.color &&
+      item.size === product.size
+    );
+
+    if (existing) {
+      existing.quantity += product.quantity;
+    } else {
+      cart.push(product);
+    }
+
+    // Lưu lại vào localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Chuyển trang
+    window.location.href = 'cart.html';
+  });
