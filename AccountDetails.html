@@ -127,18 +127,26 @@
                 </div>
                 <div class="col-7 mt-2 poppins-light">
                     <form action="" style="margin-top: 4px;">
-                        <input type="text" name="" id="" class="form-check" placeholder="First name">
-                        <input type="text" name="" id="" class="form-check" placeholder="Last name">
-                        <input type="email" name="" id="" class="form-check" placeholder="Email">
+                        <input type="text" name="firstName" class="form-check" placeholder="First name" required
+                            minlength="2">
+                        <input type="text" name="lastName" class="form-check" placeholder="Last name" required
+                            minlength="2">
+                        <input type="email" name="email" class="form-check" placeholder="Email" required>
+
                         <div class="row">
                             <h2 style="font-weight: 300;">Password Change</h2>
                         </div>
-                        <input type="password" name="" id="" class="form-check" placeholder="Current password">
-                        <input type="password" name="" id="" class="form-check" placeholder="New password">
-                        <input type="password" name="" id="" class="form-check" placeholder="Confirm password">
 
-                        <button class="btn btn-dark">Save Changes</button>
+                        <input type="password" name="currentPassword" class="form-check" placeholder="Current password"
+                            minlength="6">
+                        <input type="password" name="newPassword" class="form-check" placeholder="New password"
+                            minlength="6">
+                        <input type="password" name="confirmPassword" class="form-check" placeholder="Confirm password"
+                            minlength="6">
+
+                        <button class="btn btn-dark" type="submit">Save Changes</button>
                     </form>
+
                 </div>
             </div>
         </div>
