@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/Contact.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/spinner.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/Contact.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/spinner.css">
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/contact.js"></script>
@@ -83,7 +83,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./products.html">Product 1</a></li>
+                                <li><a class="dropdown-item" href="products.html">Product 1</a></li>
                                 <li><a class="dropdown-item" href="#">Product 2</a></li>
                             </ul>
                         </li>
@@ -117,8 +117,8 @@
             </div>
         </nav>
 
-        <div class="row contact m-0">
-            <h1>Contact Us</h1>
+        <div class="row contact m-0" style="height: 350px;">
+            <h1>Liên hệ với chúng tôi</h1>
         </div>
 
         <div class="row m-0">
@@ -131,16 +131,16 @@
         <div class="row formcont m-0">
             <div class="col-4">
                 <form action="">
-                    <h2 class="mb-4">Visit Our Store</h2>
-                    <p class="fw-bold">Address</p>
+                    <h2 class="mb-4">Cửa hàng</h2>
+                    <p class="fw-bold">Địa chỉ</p>
                     <p>12 Nguyễn Văn Bảo, Phường 1, Gò Vấp, Hồ Chí Minh</p>
-                    <p class="fw-bold">Phone</p>
+                    <p class="fw-bold">Điện thoại</p>
                     <p>0238940390</p>
                     <p class="fw-bold">Email</p>
                     <p>iuh@gmail.com</p>
-                    <p class="fw-bold">Open Time</p>
-                    <p>Our store has re-opened for shopping,<br>
-                        exchange Every day 11am to 7pm
+                    <p class="fw-bold">Thời gian hoạt động</p>
+                    <p>Cửa hàng của chúng tôi đã mở cửa<br>
+                        hàng ngày từ 7h đến 21h
                     </p>
                     <div class="row">
                         <ul class="wrapper">
@@ -171,10 +171,11 @@
             <div class="col-5">
                 <form action="">
                     <div class="row">
-                        <h2>Get in Touch</h2>
+                        <h2>Liên hệ</h2>
                     </div>
                     <div class="row">
-                        <p>If you’ve got great products your making or looking to work with us then drop us a line.</p>
+                        <p>Nếu bạn có thắc mắc gì về sản phẩm hoặc bạn có những sản phẩm tuyệt vời đang làm hoặc muốn
+                            hợp tác với chúng tôi thì hãy liên hệ với chúng tôi.</p>
                     </div>
 
                     <div class="row">
@@ -182,7 +183,7 @@
                             <div class="row m-1">
                                 <input class="mb-1 mt-0 position-relative" type="text" id="txtName" placeholder=" "
                                     onblur="ktraten()">
-                                <label class="p-0 lb error-lb w-25" id="lbName" for="txtName">Name</label>
+                                <label class="p-0 lb error-lb w-25" id="lbName" for="txtName">Họ tên</label>
                             </div>
                             <span id="errName" class="error ps-2"></span>
                         </div>
@@ -199,13 +200,13 @@
                     <div class="row ms-1">
                         <div class="row">
                             <textarea name="Message" id="Message" placeholder="" onblur="ktraMessage()"></textarea>
-                            <label class="p-0 lb lbMess w-25" for="">Message</label>
+                            <label class="p-0 lb lbMess w-25" for="">Nội dung</label>
                         </div>
                         <span id="errMessage" class="error ps-2"></span>
                     </div>
 
                     <div class="row m-0 mt-5 mb-5 me-2">
-                        <button class="btn_Send" type="button" onclick="btnSend()"><span>Send</span></button>
+                        <button class="btn_Send" type="button" onclick="btnSend()"><span>Gửi</span></button>
                     </div>
                 </form>
             </div>
