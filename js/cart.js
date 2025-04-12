@@ -154,8 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <div>
               <h3 class="mb-0">${product.name}</h3>
               <p class="text-danger mb-0 fw-bold">&#8363;${product.price.toLocaleString(
-                "vi-VN"
-              )}</p>
+        "vi-VN"
+      )}</p>
             </div>
             <div class="d-flex align-items-center">
               <div class="counter me-3">
@@ -188,11 +188,11 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("beforeunload", function () {
     localStorage.removeItem("cart");
   });
-// Sự kiện trở về product
+  // Sự kiện trở về product
   const backBtn = document.querySelector(".back");
   if (backBtn) {
     backBtn.addEventListener("click", function () {
-      window.location.href = "products.html";
+      window.location.href = "./products.html";
     });
   }
 });
