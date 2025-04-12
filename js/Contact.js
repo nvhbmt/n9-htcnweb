@@ -6,14 +6,14 @@ function ktraten() {
     if (ten === "" || !namePattern.test(ten)) {
         document.getElementById("txtName").classList.add("error-border");
         errName.style.display = "inline";
-        if(ten === ""){ 
+        if (ten === "") {
             errName.textContent = "Tên không được để trống.";
         }
-        else{
+        else {
             errName.textContent = "Phải viết hoa chữ cái đầu.";
         }
         return false;
-    } 
+    }
     else {
         document.getElementById("txtName").classList.remove("error-border");
         errName.style.display = "none";
@@ -23,20 +23,20 @@ function ktraten() {
 
 function ktraEmail() {
     let email = document.getElementById("txtEmail").value.trim();
-    let errEmail = document.getElementById("errEmail"); 
+    let errEmail = document.getElementById("errEmail");
     let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Regex kiểm tra email hợp lệ
 
     if (email === "" || !emailPattern.test(email)) {
         document.getElementById("txtEmail").classList.add("error-border");
         errEmail.style.display = "inline";
-        if (email === ""){
+        if (email === "") {
             errEmail.innerHTML = "Email không được để trống.";
         }
-        else{
+        else {
             errEmail.innerHTML = "Vui lòng nhập email hợp lệ.<br>(Ví dụ: example@gmail.com)";
         }
         return false;
-    } 
+    }
     else {
         document.getElementById("txtEmail").classList.remove("error-border");
         errEmail.style.display = "none";
@@ -53,7 +53,7 @@ function ktraMessage() {
         errMessage.style.display = "inline";
         errMessage.innerHTML = "Vui lòng nhập nội dung tin nhắn.";
         return false;
-    } 
+    }
     else {
         document.getElementById("Message").classList.remove("error-border");
         document.querySelector(".lbMess").style.top = "2px";
@@ -70,6 +70,6 @@ function btnSend() {
 
     // Nếu tất cả đều hợp lệ thì thông báo
     if (valiName && validEmail && validPassword) {
-        alert("Gửi tin thành công!"); 
+        alert("Gửi tin thành công!");
     }
 };
