@@ -122,22 +122,24 @@
     <!-- end spinner search -->
     <!-- content -->
     <div class="container px-0 position-relative">
-        <div class="search">
-            <button class="btnSearch btnIcon" onclick="searchProduct(); showSpinner();">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <input type="text" id="searchInput" class="txtSearch" placeholder="  Search Here...">
-        </div>
+
         <!-- row 1 -->
         <div class="breadcrumb-section">
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+                        <li class="breadcrumb-item"><a href="./index.html">Trang Chủ</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Sản Phẩm</li>
                     </ol>
                 </nav>
             </div>
+        </div>
+
+        <div class="search">
+            <button class="btnSearch btnIcon" onclick="searchProduct(); showSpinner();">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" id="searchInput" class="txtSearch" placeholder="  Search Here...">
         </div>
         <div class="products-container row g-2">
             <!-- card 1 -->
