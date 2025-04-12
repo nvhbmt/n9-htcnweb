@@ -2,22 +2,22 @@ function ktraten() {
     let ten = document.getElementById("txtName").value.trim();
     let errName = document.getElementById("errName");
     let namePattern = /^[A-Z][a-z]*$/; // Viết hoa chữ cái đầu mỗi từ
-    let words = ten.split(" "); 
+    let words = ten.split(" ");
 
     if (ten === "" || !namePattern.test(ten) || words.length > 1) {
         document.getElementById("txtName").classList.add("error-border");
         errName.style.display = "inline";
-        if(ten === ""){  
+        if (ten === "") {
             errName.textContent = "Tên không được để trống.";
         }
-        else if(words.length > 1){
+        else if (words.length > 1) {
             errName.textContent = "Chỉ nhập tên.";
         }
-        else{
+        else {
             errName.textContent = "Phải viết hoa chữ cái đầu.";
         }
         return false;
-    } 
+    }
     else {
         document.getElementById("txtName").classList.remove("error-border");
         errName.style.display = "none";
@@ -33,14 +33,14 @@ function ktraLastName() {
     if (ten === "" || !namePattern.test(ten)) {
         document.getElementById("txtLastName").classList.add("error-border");
         errName.style.display = "inline";
-        if(ten === ""){
+        if (ten === "") {
             errName.textContent = "Họ không được để trống.";
         }
-        else{          
+        else {
             errName.textContent = "Phải viết hoa chữ cái đầu. ";
         }
         return false;
-    } 
+    }
     else {
         document.getElementById("txtLastName").classList.remove("error-border");
         errName.style.display = "none";
@@ -50,20 +50,20 @@ function ktraLastName() {
 
 function ktraEmail() {
     let email = document.getElementById("txtEmail").value.trim();
-    let errEmail = document.getElementById("errEmail"); 
+    let errEmail = document.getElementById("errEmail");
     let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Regex kiểm tra email hợp lệ
 
     if (email === "" || !emailPattern.test(email)) {
         document.getElementById("txtEmail").classList.add("error-border");
         errEmail.style.display = "inline";
-        if (email === ""){
+        if (email === "") {
             errEmail.innerHTML = "Email không được để trống.";
         }
-        else{
+        else {
             errEmail.innerHTML = "Vui lòng nhập email hợp lệ (Ví dụ: example@gmail.com)";
         }
         return false;
-    } 
+    }
     else {
         document.getElementById("txtEmail").classList.remove("error-border");
         errEmail.style.display = "none";
@@ -83,12 +83,12 @@ function ktraPassword() {
         errPassword.style.display = "inline";
         if (password === "") {
             errPassword.innerHTML = "Mật khẩu không được để trống.";
-        } 
+        }
         else {
             errPassword.innerHTML = "Mật khẩu phải có ít nhất 8 ký tự, gồm chữ hoa, chữ thường, số và ký tự đặc biệt.";
         }
         return false;
-    } 
+    }
     else {
         document.getElementById("txtPassword").classList.remove("error-border");
         errPassword.style.display = "none";
@@ -103,8 +103,8 @@ function btnLogin() {
 
     // Nếu tất cả đều hợp lệ thì sẽ đi đến trang khác
     if (validEmail && validPassword) {
-        alert("Đăng nhập thành công!"); 
-        window.location.href = "../Contact.html";
+        alert("Đăng nhập thành công!");
+        window.location.href = "../contact.html";
     }
 };
 
