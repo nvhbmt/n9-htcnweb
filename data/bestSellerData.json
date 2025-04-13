@@ -7,7 +7,8 @@
             "orange",
             "black",
             "white"
-        ]
+        ],
+        "link": "./productDetails.html"
     },
     {
         "image": "https://themesflat.co/html/ecomus/images/products/purple.jpg",
@@ -16,6 +17,7 @@
         "colors": [
             "black",
             "white"
-        ]
+        ],
+        "link": "./productDetails.html"
     }
 ]

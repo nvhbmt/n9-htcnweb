@@ -1,0 +1,279 @@
+[
+    {
+        "id": 1,
+        "name": "Áo Thun Nữ",
+        "price": 150000,
+        "image": "img/women/aothun_black.jpg",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "colors": [
+            {
+                "name": "Black",
+                "value": "black",
+                "image": "img/women/aothun_black.jpg",
+                "style": "black",
+                "default": true
+            },
+            {
+                "name": "Beige",
+                "value": "beige",
+                "image": "img/women/aothun_beige.jpg",
+                "style": "rgb(200, 173, 127)",
+                "default": false
+            },
+            {
+                "name": "Blue",
+                "value": "blue",
+                "image": "img/women/aothun_blue.jpg",
+                "style": "rgb(27, 121, 165)",
+                "default": false
+            }
+        ],
+        "details_link": "productDetails.html"
+    },
+    {
+        "id": 2,
+        "name": "Áo Sơ Mi Ngắn Nữ",
+        "price": 120000,
+        "image": "img/women/brown-2.jpg",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "X"
+        ],
+        "colors": [
+            {
+                "name": "Brown",
+                "value": "brown",
+                "image": "img/women/brown-2.jpg",
+                "style": "rgb(151, 121, 69)",
+                "default": true
+            },
+            {
+                "name": "Plum",
+                "value": "plum",
+                "image": "img/women/purple.jpg",
+                "style": "plum",
+                "default": false
+            },
+            {
+                "name": "Light Green",
+                "value": "light_green",
+                "image": "img/women/green.jpg",
+                "style": "lightgreen",
+                "default": false
+            }
+        ],
+        "details_link": "productDetails.html"
+    },
+    {
+        "id": 3,
+        "name": "Áo Ba Lỗ Nữ",
+        "price": 75000,
+        "image": "img/women/orange-1.jpg",
+        "sizes": [
+            "M",
+            "L",
+            "X"
+        ],
+        "colors": [
+            {
+                "name": "Orange",
+                "value": "orange",
+                "image": "img/women/orange-1.jpg",
+                "style": "orange",
+                "default": true
+            },
+            {
+                "name": "White",
+                "value": "white",
+                "image": "img/women/white-1.jpg",
+                "style": "white",
+                "default": false
+            },
+            {
+                "name": "Black",
+                "value": "black",
+                "image": "img/women/black-12.jpg",
+                "style": "black",
+                "default": false
+            }
+        ],
+        "details_link": "productDetails.html"
+    },
+    {
+        "id": 4,
+        "name": "Đồ Bộ Nữ",
+        "price": 175000,
+        "image": "img/women/grey.jpg",
+        "sizes": [
+            "M",
+            "L",
+            "X",
+            "XL"
+        ],
+        "colors": [
+            {
+                "name": "Grey",
+                "value": "grey",
+                "image": "img/women/grey.jpg",
+                "style": "gray",
+                "default": true
+            },
+            {
+                "name": "Pink",
+                "value": "Pink",
+                "image": "img/women/pink-2.jpg",
+                "style": "pink",
+                "default": false
+            },
+            {
+                "name": "Light Pink",
+                "value": "light-pink",
+                "image": "img/women/light-pink.jpg",
+                "style": "lightpink",
+                "default": false
+            }
+        ],
+        "details_link": "productDetails.html"
+    },
+    {
+        "id": 5,
+        "name": "Áo Sơ Mi Nam",
+        "price": 200000,
+        "image": "img/man/black-4.jpg",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "colors": [
+            {
+                "name": "Black",
+                "value": "black",
+                "image": "img/man/black-4.jpg",
+                "style": "black",
+                "default": true
+            },
+            {
+                "name": "Light Blue",
+                "value": "light-blue",
+                "image": "img/man/light-blue.jpg",
+                "style": "lightblue",
+                "default": false
+            },
+            {
+                "name": "White",
+                "value": "White",
+                "image": "img/man/white-7.jpg",
+                "style": "white",
+                "default": false
+            }
+        ],
+        "details_link": "productDetails.html"
+    },
+    {
+        "id": 6,
+        "name": "Áo SweatShirt Nam",
+        "price": 220000,
+        "image": "img/man/light-green-2.jpg",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "colors": [
+            {
+                "name": "Light Green",
+                "value": "light-green",
+                "image": "img/man/light-green-2.jpg",
+                "style": "lightgreen",
+                "default": true
+            },
+            {
+                "name": "Light Grey",
+                "value": "LightGrey",
+                "image": "img/man/light-grey.jpg",
+                "style": "lightgray",
+                "default": false
+            },
+            {
+                "name": "Blue",
+                "value": "blue",
+                "image": "img/man/blue.jpg",
+                "style": "blue",
+                "default": false
+            }
+        ],
+        "details_link": "productDetails.html"
+    },
+    {
+        "id": 7,
+        "name": "Khăn Choàng",
+        "price": 180000,
+        "image": "img/scarf.jpg",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "X"
+        ],
+        "colors": [
+            {
+                "name": "Black",
+                "value": "black",
+                "image": "img/scarf.jpg",
+                "style": "black",
+                "default": true
+            },
+            {
+                "name": "Brown",
+                "value": "brown",
+                "image": "img/brown-4.jpg",
+                "style": "rgb(151, 121, 69)",
+                "default": false
+            }
+        ],
+        "details_link": "productDetails.html"
+    },
+    {
+        "id": 8,
+        "name": "Áo Hoodie Nam",
+        "price": 270000,
+        "image": "img/man/black-7.jpg",
+        "sizes": [
+            "M",
+            "L",
+            "X",
+            "XL"
+        ],
+        "colors": [
+            {
+                "name": "Black",
+                "value": "black",
+                "image": "img/man/black-7.jpg",
+                "style": "black",
+                "default": true
+            },
+            {
+                "name": "Blue",
+                "value": "blue",
+                "image": "img/man/blue-2.jpg",
+                "style": "blue",
+                "default": false
+            },
+            {
+                "name": "White",
+                "value": "white",
+                "image": "img/man/white-8.jpg",
+                "style": "white",
+                "default": false
+            }
+        ],
+        "details_link": "productDetails.html"
+    }
+]

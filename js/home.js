@@ -41,19 +41,21 @@ function loadBestSeller() {
         data.forEach((item) => {
             $('#best-seller').append(`
                 <div class="col">
-                    <div class="card h-100 border-0">
-                        <img src="${item.image}" class="card-img-top"
-                            alt="${item.title}">
-                        <div class="card-body px-0">
-                            <h6 class="mb-1">${item.title}</h6>
-                            <p class="fw-bold mb-1">${item.price}</p>
-                            <div class="d-flex gap-2">
-                                ${item.colors.map(color => `
-                                     <span class="rounded-circle border" style="width:15px;height:15px;background:${color};"></span>
-                                    `).join('\n')}
+                    <a href="${item.link}" class="text-decoration-none text-dark">
+                        <div class="card h-100 border-0">
+                            <img src="${item.image}" class="card-img-top"
+                                alt="${item.title}">
+                            <div class="card-body px-0">
+                                <h6 class="mb-1">${item.title}</h6>
+                                <p class="fw-bold mb-1">${item.price}</p>
+                                <div class="d-flex gap-2">
+                                    ${item.colors.map(color => `
+                                        <span class="rounded-circle border" style="width:15px;height:15px;background:${color};"></span>
+                                        `).join('\n')}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             `)
         })

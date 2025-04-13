@@ -54,7 +54,7 @@
 </head>
 
 <body>
-    <!-- header -->
+    <!-- Top Bar -->
     <div class="top-bar fixed-top">
         <div class="container d-flex justify-content-between align-items-center">
             <div>
@@ -63,17 +63,19 @@
                 <i class="bi bi-tiktok"></i>
                 <i class="bi bi-pinterest"></i>
             </div>
-            <div>Summer sale discount off 70%</div>
+            <div>Giảm giá mùa hè lên đến 70%</div>
             <div>
-                <span><img src="https://flagcdn.com/us.svg" width="20" alt="usd"> USD</span> |
-                <span>English</span>
+                <span><img src="https://flagcdn.com/vn.svg" width="20" alt="usd"> VNĐ</span> |
+                <span>Tiếng Việt</span>
             </div>
         </div>
     </div>
     <!-- header -->
     <nav class="navbar navbar-expand-lg fixed-top" style="top: 30px;">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">ecomus</a>
+            <a class="navbar-brand fw-bold" href="./index.html">
+                ShopN6
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -81,24 +83,23 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <!-- Left menu -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Buy Now</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./support.html">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./products.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">Về chúng tôi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./support.html">Hỗ trợ</a></li>
                 </ul>
-
                 <!-- Icons -->
                 <div class="nav-icons d-flex align-items-center">
-                    <i class="bi bi-search"></i>
-                    <i class="bi bi-person"></i>
-                    <i class="bi bi-heart">
-                        <span class="badge-notify">0</span>
-                    </i>
-                    <i class="bi bi-cart">
-                        <span class="badge-notify">0</span>
-                    </i>
+                    <a href="./dashboard.html"><i class="bi bi-person"></i></a>
+                    <a href="./wishlist.html">
+                        <i class="bi bi-heart">
+                            <span class="badge-notify">0</span>
+                        </i>
+                    </a>
+                    <a href="./cart.html">
+                        <i class="bi bi-cart">
+                            <span class="badge-notify">0</span>
+                        </i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -138,12 +139,11 @@
             <div class="row">
                 <!-- Logo + Contact -->
                 <div class="col-md-3 mb-4">
-                    <h4 class="fw-bold">ecomus</h4>
-                    <p class="mb-1">Address: 1234 Fashion Street, Suite 567,<br>New York, NY 10001</p>
-                    <p class="mb-1">Email: <a href="mailto:info@fashionshop.com">info@fashionshop.com</a></p>
-                    <p class="mb-1">Phone: <a href="tel:2125551234">(212) 555-1234</a></p>
-                    <a href="#" class="d-block mt-2 text-decoration-underline">Get direction <i
-                            class="fas fa-arrow-up-right-from-square"></i></a>
+                    <h4 class="fw-bold">ShopN6</h4>
+                    <p class="mb-1">Địa chỉ: Số 12 Nguyễn Văn Bảo, Phường 1, Quận Gò Vấp,<br>Thành phố Hồ Chí Minh</p>
+                    <p class="mb-1">Lớp: <strong>DHKTPM19BTT</strong></p>
+                    <p class="mb-1">Nhóm: <strong>9</strong></p>
+
                     <!-- Social icons -->
                     <div class="mt-3 d-flex gap-2">
                         <a href="#" class="btn btn-outline-dark btn-sm rounded-circle">
@@ -166,48 +166,38 @@
 
                 <!-- Help -->
                 <div class="col-md-2 mb-4">
-                    <h6 class="fw-bold">Help</h6>
+                    <h6 class="fw-bold">Trợ giúp</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-dark">Privacy Policy</a></li>
-                        <li><a href="#" class="text-dark">Returns + Exchanges</a></li>
-                        <li><a href="#" class="text-dark">Shipping</a></li>
-                        <li><a href="#" class="text-dark">Terms & Conditions</a></li>
-                        <li><a href="#" class="text-dark">FAQ’s</a></li>
-                        <li><a href="#" class="text-dark">Compare</a></li>
-                        <li><a href="#" class="text-dark">My Wishlist</a></li>
+                        <li><a href="./wishlist.html" class="text-dark">Danh sách yêu thích</a></li>
                     </ul>
                 </div>
 
                 <!-- About Us -->
                 <div class="col-md-2 mb-4">
-                    <h6 class="fw-bold">About us</h6>
+                    <h6 class="fw-bold">Chúng tôi</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-dark">Our Story</a></li>
-                        <li><a href="#" class="text-dark">Visit Our Store</a></li>
-                        <li><a href="#" class="text-dark">Contact Us</a></li>
-                        <li><a href="#" class="text-dark">Account</a></li>
+                        <li><a href="./about.html" class="text-dark">Giới thiệu</a></li>
+                        <li><a href="./contact.html" class="text-dark">Liên hệ</a></li>
+
                     </ul>
                 </div>
 
                 <!-- Email Subscribe -->
                 <div class="col-md-5 mb-4">
-                    <h6 class="fw-bold">Sign Up for Email</h6>
-                    <p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
+                    <h6 class="fw-bold">Đăng Ký Nhận Email</h6>
+                    <p>Đăng ký để nhận thông tin về sản phẩm mới, khuyến mãi, nội dung độc quyền, sự kiện và nhiều hơn
+                        nữa!</p>
                     <form class="d-flex">
-                        <input type="email" class="form-control me-2" placeholder="Enter your email...">
-                        <button class="btn btn-dark">Subscribe <i
-                                class="fas fa-arrow-up-right-from-square"></i></button>
+                        <input type="email" class="form-control me-2" placeholder="Nhập email của bạn...">
+                        <button class="btn btn-dark">Đăng Ký <i class="fas fa-arrow-up-right-from-square"></i></button>
                     </form>
-                    <div class="d-flex gap-3 mt-3">
-                        <span><img src="https://flagcdn.com/us.svg" width="20"> USD</span>
-                        <span>English</span>
-                    </div>
+
                 </div>
             </div>
 
             <!-- Bottom -->
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center border-top pt-3 mt-3">
-                <div class="text-muted">© 2024 Ecomus Store. All Rights Reserved</div>
+                <div class="text-muted">© 2025 ShopN6. Tất cả các quyền được bảo lưu</div>
                 <div class="d-flex gap-2 mt-2 mt-md-0">
                     <img src="https://img.icons8.com/color/32/000000/visa.png" />
                     <img src="https://img.icons8.com/color/32/000000/paypal.png" />
