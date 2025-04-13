@@ -8,5 +8,25 @@
         "productName": "Áo body dây thun",
         "productImage": "https://themesflat.co/html/ecomus/images/shop/products/img-p3.png",
         "productPrice": "$16.95"
+    },
+    {
+        "stars": 5,
+        "title": "Sản phẩm mới nhất của chúng tôi",
+        "description": "Tìm thấy các món đồ thời trang vừa vặn, hiện đại và giá cả hợp lý.",
+        "author": "Jane Smith",
+        "authorDescription": "Khách hàng từ Canada",
+        "productName": "Áo hoodie nam",
+        "productImage": "https://themesflat.co/html/ecomus/images/shop/products/img-p2.png",
+        "productPrice": "$22.99"
+    },
+    {
+        "stars": 5,
+        "title": "Chất lượng tuyệt vời, giá trị đáng đồng tiền",
+        "description": "Một nơi lý tưởng để mua sắm các món đồ thời trang thời thượng.",
+        "author": "Alice Johnson",
+        "authorDescription": "Khách hàng từ Australia",
+        "productName": "Giày sneaker thể thao",
+        "productImage": "https://themesflat.co/html/ecomus/images/shop/products/img-p4.png",
+        "productPrice": "$45.50"
     }
 ]
