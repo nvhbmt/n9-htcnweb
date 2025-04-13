@@ -1,0 +1,21 @@
+[
+    {
+        "image": "https://themesflat.co/html/ecomus/images/products/purple.jpg",
+        "title": "Ribbed Tank Top",
+        "price": "$16.95",
+        "colors": [
+            "orange",
+            "black",
+            "white"
+        ]
+    },
+    {
+        "image": "https://themesflat.co/html/ecomus/images/products/purple.jpg",
+        "title": "Tank Top",
+        "price": "$16.95",
+        "colors": [
+            "black",
+            "white"
+        ]
+    }
+]

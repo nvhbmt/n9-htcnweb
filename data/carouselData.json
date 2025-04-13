@@ -1,0 +1,16 @@
+[
+    {
+        "image": "https://themesflat.co/html/ecomus/images/slider/fashion-slideshow-02.jpg",
+        "title": "Phong Cách Quyến Rũ",
+        "description": "Từ thường ngày đến trang trọng, chúng tôi đều có",
+        "buttonText": "Xem bộ sưu tập",
+        "buttonLink": "./products.html"
+    },
+    {
+        "image": "https://themesflat.co/html/ecomus/images/slider/fashion-slideshow-03.jpg",
+        "title": "Hàng Mới Về",
+        "description": "Thời trang mới vừa cập bến",
+        "buttonText": "Mua ngay",
+        "buttonLink": "./products.html"
+    }
+]

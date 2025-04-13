@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/spinner.css" />
     <script src="./js/spinner.js"></script>
     <script src="./js/jquery.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -89,247 +90,29 @@
     </div>
     <section class="py-5">
         <div class="container">
-            <h2 class="text-center fw-bold mb-2">Best Seller</h2>
-            <p class="text-center mb-4">Shop the Latest Styles: Stay ahead of the curve with our newest arrivals</p>
+            <h2 class="text-center fw-bold mb-2">Bán Chạy Nhất</h2>
+            <p class="text-center mb-4">Mua Sắm Phong Cách Mới Nhất: Dẫn đầu xu hướng với những sản phẩm mới nhất của
+                chúng tôi</p>
 
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                <!-- Product 1 -->
-                <div class="col">
-                    <div class="card h-100 border-0">
-                        <img src="https://themesflat.co/html/ecomus/images/products/purple.jpg" class="card-img-top"
-                            alt="Product 1">
-                        <div class="card-body px-0">
-                            <h6 class="mb-1">Ribbed Tank Top</h6>
-                            <p class="fw-bold mb-1">$16.95</p>
-                            <div class="d-flex gap-2">
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:orange;"></span>
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:black;"></span>
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:white;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="best-seller" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
-                <!-- Product 2 -->
-                <div class="col">
-                    <div class="card h-100 border-0">
-                        <img src="https://themesflat.co/html/ecomus/images/products/purple.jpg" class="card-img-top"
-                            alt="Product 2">
-                        <div class="card-body px-0">
-                            <h6 class="mb-1">Ribbed modal T-shirt</h6>
-                            <p class="fw-bold mb-1">From $18.95</p>
-                            <div class="d-flex gap-2">
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:violet;"></span>
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:pink;"></span>
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:lime;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="col">
-                    <div class="card h-100 border-0">
-                        <img src="https://themesflat.co/html/ecomus/images/products/purple.jpg" class="card-img-top"
-                            alt="Product 3">
-                        <div class="card-body px-0">
-                            <h6 class="mb-1">Oversized Printed T-shirt</h6>
-                            <p class="fw-bold mb-1">$10.00</p>
-                            <div class="d-flex gap-2">
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:white;"></span>
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:black;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="col">
-                    <div class="card h-100 border-0">
-                        <img src="https://themesflat.co/html/ecomus/images/products/purple.jpg" class="card-img-top"
-                            alt="Product 4">
-                        <div class="card-body px-0">
-                            <h6 class="mb-1">Oversized Printed T-shirt</h6>
-                            <p class="fw-bold mb-1">$16.95</p>
-                            <div class="d-flex gap-2">
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:white;"></span>
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:pink;"></span>
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:black;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Row 2 - Product 5 -->
-                <div class="col">
-                    <div class="card h-100 border-0">
-                        <img src="https://themesflat.co/html/ecomus/images/products/purple.jpg" class="card-img-top"
-                            alt="Product 5">
-                        <div class="card-body px-0">
-                            <h6 class="mb-1">Striped Cotton Tee</h6>
-                            <p class="fw-bold mb-1">$12.50</p>
-                            <div class="d-flex gap-2">
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:#aaa;"></span>
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:#222;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="col">
-                    <div class="card h-100 border-0">
-                        <img src="https://themesflat.co/html/ecomus/images/products/purple.jpg" class="card-img-top"
-                            alt="Product 6">
-                        <div class="card-body px-0">
-                            <h6 class="mb-1">Crewneck T-shirt</h6>
-                            <p class="fw-bold mb-1">From $14.95</p>
-                            <div class="d-flex gap-2">
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:#ddd;"></span>
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:#333;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 7 -->
-                <div class="col">
-                    <div class="card h-100 border-0">
-                        <img src="https://themesflat.co/html/ecomus/images/products/purple.jpg" class="card-img-top"
-                            alt="Product 7">
-                        <div class="card-body px-0">
-                            <h6 class="mb-1">Graphic Tee</h6>
-                            <p class="fw-bold mb-1">$11.95</p>
-                            <div class="d-flex gap-2">
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:#fefefe;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 8 -->
-                <div class="col">
-                    <div class="card h-100 border-0">
-                        <img src="https://themesflat.co/html/ecomus/images/products/purple.jpg" class="card-img-top"
-                            alt="Product 8">
-                        <div class="card-body px-0">
-                            <h6 class="mb-1">Basic Tank Top</h6>
-                            <p class="fw-bold mb-1">$9.95</p>
-                            <div class="d-flex gap-2">
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:#ff7f50;"></span>
-                                <span class="rounded-circle border"
-                                    style="width:15px;height:15px;background:#000;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
     </section>
 
     <section class="py-5 bg-white">
         <div class="container">
             <!-- Section Header -->
             <div class="text-center mb-5">
-                <h2 class="fw-bold">Happy Clients</h2>
-                <p class="text-muted">Hear what they say about us</p>
+                <h2 class="fw-bold">Khách Hàng Hài Lòng</h2>
+                <p class="text-muted">Lắng nghe những gì họ nói về chúng tôi</p>
             </div>
 
             <!-- Testimonials -->
-            <div class="row g-4">
-                <!-- Testimonial 1 -->
-                <div class="col-md-4">
-                    <div class="p-4 border rounded">
-                        <div class="text-warning mb-2">
-                            ★★★★★
-                        </div>
-                        <h6 class="fw-bold">Best Online Fashion Site</h6>
-                        <p class="fst-italic">“ I always find something stylish and affordable on this web fashion site
-                            ”</p>
-                        <p class="fw-bold mb-0">Robert Smith</p>
-                        <small class="text-muted">Customer from USA</small>
-                        <hr>
-                        <div class="d-flex align-items-center">
-                            <img src="https://themesflat.co/html/ecomus/images/shop/products/img-p3.png" width="60"
-                                alt="">
-                            <div class="ms-3">
-                                <div class="fw-normal">Jersey thong body</div>
-                                <strong>$105.95</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="col-md-4">
-                    <div class="p-4 border rounded">
-                        <div class="text-warning mb-2">
-                            ★★★★★
-                        </div>
-                        <h6 class="fw-bold">Great Selection and Quality</h6>
-                        <p>"I love the variety of styles and the high-quality clothing on this web fashion site."</p>
-                        <p class="fw-bold mb-0">Allen Lyn</p>
-                        <small class="text-muted">Customer from France</small>
-                        <hr>
-                        <div class="d-flex align-items-center">
-                            <img src="https://themesflat.co/html/ecomus/images/shop/products/img-p3.png" width="60"
-                                alt="">
-                            <div class="ms-3">
-                                <div class="fw-normal">Cotton jersey top</div>
-                                <strong>$7.95</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="col-md-4">
-                    <div class="p-4 border rounded">
-                        <div class="text-warning mb-2">
-                            ★★★★★
-                        </div>
-                        <h6 class="fw-bold">Best Customer Service</h6>
-                        <p>"I finally found a web fashion site with stylish and flattering options in my size."</p>
-                        <p class="fw-bold mb-0">Peter Rope</p>
-                        <small class="text-muted">Customer from USA</small>
-                        <hr>
-                        <div class="d-flex align-items-center">
-                            <img src="https://themesflat.co/html/ecomus/images/shop/products/img-p3.png" width="60"
-                                alt="">
-                            <div class="ms-3">
-                                <div class="fw-normal">Ribbed modal T-shirt</div>
-                                <strong>From $18.95</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="testimonials" class="row g-4">
             </div>
 
             <!-- Brands -->
-            <div class="row mt-5 text-center border-top pt-4 g-3">
-                <div class="col-6 col-md-2"><strong>SSENSE</strong></div>
-                <div class="col-6 col-md-2"><strong>BURBERRY</strong></div>
-                <div class="col-6 col-md-2"><strong>NIKE</strong></div>
-                <div class="col-6 col-md-2"><strong>ASOS</strong></div>
-                <div class="col-6 col-md-2"><strong>PULL&BEAR</strong></div>
-                <div class="col-6 col-md-2"><strong>GILDAN</strong></div>
+            <div id="brands" class="row mt-5 text-center border-top pt-4 g-3">
             </div>
         </div>
     </section>
@@ -415,66 +198,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-    <script>
-        const carouselData = [{
-            image: "https://themesflat.co/html/ecomus/images/slider/fashion-slideshow-02.jpg",
-            title: "Phong Cách Quyến Rũ",
-            description: "Từ thường ngày đến trang trọng, chúng tôi đều có",
-            buttonText: "Xem bộ sưu tập",
-            buttonLink: "./products.html"
-        },
-        {
-            image: "https://themesflat.co/html/ecomus/images/slider/fashion-slideshow-03.jpg",
-            title: "Hàng Mới Về",
-            description: "Thời trang mới vừa cập bến",
-            buttonText: "Mua ngay",
-            buttonLink: "./products.html"
-        }]
-
-        const bestSeller = [{
-            image: "https://themesflat.co/html/ecomus/images/products/purple.jpg",
-            title: "Ribbed Tank Top",
-            price: "$16.95"
-        },
-        {
-            image: "https://themesflat.co/html/ecomus/images/products/purple.jpg",
-            title: "Ribbed modal T-shirt",
-            price: "From $18.95"
-        },
-        {
-            image: "https://themesflat.co/html/ecomus/images/products/purple.jpg",
-            title: "Oversized Printed T-shirt",
-            price: "$10.00"
-        },
-        {
-            image: "https://themesflat.co/html/ecomus/images/products/purple.jpg",
-            title: "Oversized Printed T-shirt",
-            price: "$16.95"
-        }]
-
-
-        $(document).ready(function () {
-            carouselData.forEach((item, index) => {
-                $('#fashionCarousel .carousel-indicators').append(`
-                    <button type="button" data-bs-target="#fashionCarousel" data-bs-slide-to="${index}"
-                        class="${index === 0 ? 'active' : ''}" aria-current="${index === 0 ? 'true' : 'false'}"
-                        aria-label="Slide ${index + 1}"></button>
-                `)
-                $('#fashionCarousel .carousel-inner').append(`
-                    <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                        <img src="${item.image}"
-                            class="d-block w-100" alt="Slide ${index + 1}">
-                        <div class="carousel-caption">
-                            <h1>${item.title}</h1>
-                            <p>${item.description}</p>
-                            <a href="${item.buttonLink}" class="btn-shop">${item.buttonText} &nbsp; <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                `)
-            })
-        });
-
-    </script>
+    <script src="./js/home.js"></script>
 </body>
 
 </html>
