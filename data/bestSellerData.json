@@ -19,5 +19,43 @@
             "white"
         ],
         "link": "./productDetails.html"
+    },
+    {
+        "image": "https://themesflat.co/html/ecomus/images/products/black-4.jpg",
+        "title": "Basic Tank Top",
+        "price": "$16.95",
+        "colors": [
+            "black",
+            "white"
+        ],
+        "link": "./productDetails.html"
+    },
+    {
+        "image": "https://themesflat.co/html/ecomus/images/products/black-9.jpg",
+        "title": "Slim Fit Tee",
+        "price": "$16.95",
+        "colors": [
+            "black",
+            "grey"
+        ],
+        "link": "./productDetails.html"
+    },
+    {
+        "image": "https://themesflat.co/html/ecomus/images/products/blue-2.jpg",
+        "title": "Classic Tee",
+        "price": "$16.95",
+        "colors": [
+            "blue"
+        ],
+        "link": "./productDetails.html"
+    },
+    {
+        "image": "https://themesflat.co/html/ecomus/images/products/light-grey.jpg",
+        "title": "Muscle Fit Tee",
+        "price": "$16.95",
+        "colors": [
+            "light-grey"
+        ],
+        "link": "./productDetails.html"
     }
 ]
