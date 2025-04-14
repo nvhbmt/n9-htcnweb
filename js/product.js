@@ -29,7 +29,7 @@ function loadProducts() {
     const $container = $('#products-container');
     $.ajax({
         method: "GET",
-        url: "../data/productData.json",
+        url: "./data/productData.json",
         dataType: "json",
     }).done(function (data) {
         $.each(data, function (index, product) {

@@ -8,7 +8,7 @@ const bestSeller = [{
 function loadCarousel() {
     $.ajax({
         method: "GET",
-        url: "../data/carouselData.json",
+        url: "./data/carouselData.json",
         dataType: "json",
     }).done(function (data) {
         data.forEach((item, index) => {
@@ -35,7 +35,7 @@ function loadCarousel() {
 function loadBestSeller() {
     $.ajax({
         method: "GET",
-        url: "../data/bestSellerData.json",
+        url: "./data/bestSellerData.json",
         dataType: "json",
     }).done(function (data) {
         data.forEach((item) => {
@@ -74,7 +74,7 @@ function loadBrands() {
 function loadTestimonials() {
     $.ajax({
         method: "GET",
-        url: "../data/testimonialData.json",
+        url: "./data/testimonialData.json",
         dataType: "json",
     }).done(function (data) {
         data.forEach((item) => {
