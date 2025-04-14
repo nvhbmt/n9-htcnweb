@@ -347,7 +347,13 @@
                             img.src = originalSrc;
                         }
                     });
-
+                    // Khi nhấn vào dot (chọn màu)
+                    dot.addEventListener("click", () => {
+                        if (colorToImage[color]) {
+                            img.src = `img/women/${colorToImage[color]}`;
+                            selectedColor = color; // Lưu lại màu đã chọn
+                        }
+                    });
                 });
             });
         });
