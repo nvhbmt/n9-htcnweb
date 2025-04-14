@@ -143,11 +143,11 @@
                         </div>
 
                         <input type="password" name="currentPassword" class="form-check" placeholder="Mật khẩu hiện tại"
-                            minlength="6">
+                            required>
                         <input type="password" name="newPassword" class="form-check" placeholder="Mật khẩu mới"
-                            minlength="6">
+                            required>
                         <input type="password" name="confirmPassword" class="form-check" placeholder="Xác nhận mật khẩu"
-                            minlength="6">
+                            required>
 
                         <button class="btn btn-dark" type="submit">Lưu thay đổi</button>
                     </form>
@@ -238,6 +238,58 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <script>
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Chặn form gửi đi
+
+            // Lấy giá trị các input
+            const firstName = document.querySelector("input[name='firstName']").value.trim();
+            const lastName = document.querySelector("input[name='lastName']").value.trim();
+            const email = document.querySelector("input[name='email']").value.trim(); // không cần check
+            const currentPassword = document.querySelector("input[name='currentPassword']").value.trim();
+            const newPassword = document.querySelector("input[name='newPassword']").value.trim();
+            const confirmPassword = document.querySelector("input[name='confirmPassword']").value.trim();
+
+            let user = JSON.parse(localStorage.getItem("user"));
+            if (!user) {
+                alert("Không tìm thấy thông tin người dùng.");
+                return;
+            }
+
+            // Kiểm tra mật khẩu hiện tại
+            if (currentPassword !== user.password) {
+                alert("Mật khẩu hiện tại không đúng!");
+                return;
+            }
+
+            // Kiểm tra định dạng mật khẩu mới
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRegex.test(newPassword)) {
+                alert("Mật khẩu mới phải có ít nhất 1 chữ in hoa, 1 ký tự đặc biệt và tối thiểu 8 ký tự.");
+                return;
+            }
+
+            // Kiểm tra xác nhận mật khẩu
+            if (newPassword !== confirmPassword) {
+                alert("Xác nhận mật khẩu không khớp.");
+                return;
+            }
+
+            // Cập nhật user và lưu lại
+            const updatedUser = {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: newPassword
+            };
+
+            localStorage.setItem("user", JSON.stringify(updatedUser));
+
+            alert("Cập nhật tài khoản thành công!");
+            this.reset();
+        });
+
+    </script>
 </body>
 
 </html>
