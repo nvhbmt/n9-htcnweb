@@ -103,8 +103,17 @@ function btnLogin() {
 
     // Nếu tất cả đều hợp lệ thì sẽ đi đến trang khác
     if (validEmail && validPassword) {
-        alert("Đăng nhập thành công!");
-        window.location.href = "../contact.html";
+        let email = document.getElementById("txtEmail").value.trim();
+        let password = document.getElementById("txtPassword").value.trim();
+
+        let user = JSON.parse(localStorage.getItem("user"));
+
+        if (user.email === email && user.password === password) {
+            alert("Đăng nhập thành công!");
+            window.location.href = "../index.html";
+        } else {
+            alert("Email hoặc mật khẩu không đúng!");
+        }
     }
 };
 
@@ -117,6 +126,20 @@ function btnRegister() {
 
     // Nếu tất cả đều hợp lệ thì thông báo
     if (validName && valiLastName && validEmail && validPassword) {
+        let firstName = document.getElementById("txtName").value.trim();
+        let lastName = document.getElementById("txtLastName").value.trim();
+        let email = document.getElementById("txtEmail").value.trim();
+        let password = document.getElementById("txtPassword").value.trim();
+
+        let user = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            password: password
+        };
+
+        localStorage.setItem("user", JSON.stringify(user));
+
         alert("Đăng ký thành công!");
     }
 };
@@ -127,7 +150,14 @@ function btnReset() {
 
     // Nếu tất cả đều hợp lệ thì thông báo
     if (validEmail) {
-        alert("Đăng nhập thành công!");
+        let email = document.getElementById("txtEmail").value.trim();
+
+        let user = JSON.parse(localStorage.getItem("user"));
+
+        if (user.email === email) {
+            alert("Đăng nhập thành công!");
+        } else {
+            alert("Email không đúng!");
+        }
     }
 };
-
